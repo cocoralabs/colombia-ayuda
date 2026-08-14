@@ -60,6 +60,7 @@ const I18N = {
     "detail.distance": "Distancia",
     "detail.verified": "Verificada",
     "detail.updated": "Hace {n} min",
+    "detail.updatedNote": "Última actualización: hace {n} min · Información verificada ✓",
     "detail.donateNow": "Donar ahora",
     "detail.moreInfo": "Ver más información",
     "detail.paymentInfo": "Información de pago",
@@ -239,6 +240,7 @@ const I18N = {
     "detail.distance": "Distance",
     "detail.verified": "Verified",
     "detail.updated": "{n} min ago",
+    "detail.updatedNote": "Last updated: {n} min ago · Verified information ✓",
     "detail.donateNow": "Donate now",
     "detail.moreInfo": "See more information",
     "detail.paymentInfo": "Payment information",
@@ -383,6 +385,7 @@ const ORGS = [
   {
     id: "cruz-roja-colombiana",
     urgency: "critica",
+    needBadge: { es: "🩸 Sangre urgente", en: "🩸 Blood urgently needed" },
     flow: "both",
     name: "Cruz Roja Colombiana",
     categoryKey: "emergencias",
@@ -427,6 +430,7 @@ const ORGS = [
   {
     id: "abaco",
     urgency: "alta",
+    needBadge: { es: "🍱 Alimentos urgentes", en: "🍱 Urgent food needed" },
     flow: "both",
     name: "ABACO",
     categoryKey: "alimentos",
@@ -461,6 +465,7 @@ const ORGS = [
   {
     id: "banco-alimentos-bogota",
     urgency: "alta",
+    needBadge: { es: "🍱 Alimentos urgentes", en: "🍱 Urgent food needed" },
     flow: "both",
     name: "Banco de Alimentos de Bogotá",
     categoryKey: "alimentos",
@@ -485,6 +490,7 @@ const ORGS = [
   {
     id: "alcaldia-cali",
     urgency: "critica",
+    needBadge: { es: "🏠 Albergue urgente", en: "🏠 Urgent shelter" },
     flow: "colombia",
     name: { es: "Alcaldía Cali — Plazoleta Jairo Varela", en: "Cali City Hall — Jairo Varela Plaza" },
     categoryKey: "gobierno",
@@ -508,6 +514,7 @@ const ORGS = [
   {
     id: "alcaldia-pereira",
     urgency: "critica",
+    needBadge: { es: "🔍 Desaparecidos", en: "🔍 Missing persons" },
     flow: "colombia",
     name: { es: "Alcaldía Pereira — 7 puntos", en: "Pereira City Hall — 7 points" },
     categoryKey: "gobierno",
@@ -538,6 +545,7 @@ const ORGS = [
   {
     id: "alcaldia-manizales",
     urgency: "alta",
+    needBadge: { es: "🏥 Atención médica", en: "🏥 Medical care" },
     flow: "colombia",
     name: { es: "Alcaldía Manizales — albergues + Hemocentro", en: "Manizales City Hall — shelters + Blood Center" },
     categoryKey: "gobierno",
@@ -564,6 +572,7 @@ const ORGS = [
   {
     id: "unicef-colombia",
     urgency: "alta",
+    needBadge: { es: "👶 Niños afectados", en: "👶 Children affected" },
     flow: "exterior",
     name: "UNICEF Colombia",
     categoryKey: "infancia",
@@ -586,6 +595,7 @@ const ORGS = [
   {
     id: "world-central-kitchen",
     urgency: "alta",
+    needBadge: { es: "🍽️ Comida caliente", en: "🍽️ Hot meals" },
     flow: "exterior",
     name: "World Central Kitchen",
     categoryKey: "alimentacion",
@@ -608,6 +618,7 @@ const ORGS = [
   {
     id: "direct-relief",
     urgency: "alta",
+    needBadge: { es: "💊 Medicinas urgentes", en: "💊 Urgent medicine" },
     flow: "exterior",
     name: "Direct Relief",
     categoryKey: "salud",
@@ -630,6 +641,7 @@ const ORGS = [
   {
     id: "americares",
     urgency: "alta",
+    needBadge: { es: "🏥 Salud de emergencia", en: "🏥 Emergency health" },
     flow: "exterior",
     name: "Americares",
     categoryKey: "salud",
@@ -652,6 +664,7 @@ const ORGS = [
   {
     id: "global-giving",
     urgency: "media",
+    needBadge: { es: "🌍 Ayuda internacional", en: "🌍 International aid" },
     flow: "exterior",
     name: "GlobalGiving",
     categoryKey: "recuperacion",
@@ -674,6 +687,7 @@ const ORGS = [
   {
     id: "wfp-colombia",
     urgency: "alta",
+    needBadge: { es: "🌽 Seguridad alimentaria", en: "🌽 Food security" },
     flow: "exterior",
     name: "WFP Colombia",
     categoryKey: "alimentacion",
@@ -696,6 +710,7 @@ const ORGS = [
   {
     id: "all-hands-hearts",
     urgency: "media",
+    needBadge: { es: "🔨 Rescate y reconstrucción", en: "🔨 Rescue & rebuilding" },
     flow: "exterior",
     name: "All Hands & Hearts",
     categoryKey: "rescate",
@@ -718,6 +733,7 @@ const ORGS = [
   {
     id: "plan-international",
     urgency: "media",
+    needBadge: { es: "👧 Protección infantil", en: "👧 Child protection" },
     flow: "exterior",
     name: "Plan International",
     categoryKey: "infancia",
@@ -763,6 +779,7 @@ const ORGS = [
   {
     id: "tigresas-un-solo-corazon",
     urgency: "alta",
+    needBadge: { es: "❤️ Red oficial", en: "❤️ Official network" },
     flow: "both",
     name: "Colombia Un Solo Corazón — Tigresas Moviéndose con Corazón",
     categoryKey: "comunitaria",
@@ -990,6 +1007,10 @@ function categoryLabel(org) {
 function urgencyLabel(u) {
   return t("urgency." + u);
 }
+function needBadgeLabel(org) {
+  if (org.needBadge) return org.needBadge[state.lang] || org.needBadge.es;
+  return urgencyLabel(org.urgency);
+}
 function needLabel(k) {
   return t("filters." + k);
 }
@@ -1209,7 +1230,7 @@ function orgCardHTML(org) {
               <div class="org-name">${escapeHtml(orgName(org))}</div>
               <div class="org-category">${categoryLabel(org)}</div>
             </div>
-            <span class="badge badge-${org.urgency}">${urgencyLabel(org.urgency)}</span>
+            <span class="badge badge-${org.urgency}">${escapeHtml(needBadgeLabel(org))}</span>
           </div>
           ${special}
         </div>
@@ -1349,8 +1370,9 @@ function renderDetail() {
       <h1 class="detail-name">${escapeHtml(orgName(org))}</h1>
       <div class="detail-cat-row">
         <span class="detail-category">${categoryLabel(org)}</span>
-        <span class="badge badge-${org.urgency}">${urgencyLabel(org.urgency)}</span>
+        <span class="badge badge-${org.urgency}">${escapeHtml(needBadgeLabel(org))}</span>
       </div>
+      <p class="detail-updated-note">${t("detail.updatedNote", { n: org.updatedMinAgo })}</p>
       ${special}
       <p class="detail-description">${escapeHtml(orgDesc(org))}</p>
     </div>
