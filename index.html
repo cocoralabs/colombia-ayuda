@@ -102,7 +102,7 @@
           <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
         </button>
         <button class="bell-btn" id="bell-btn" aria-label="Notificaciones">
-          🔔<span class="bell-badge">3</span>
+          🔔<span class="bell-badge" id="bell-badge">3</span>
         </button>
       </div>
     </header>
@@ -194,6 +194,17 @@
   </section>
 
   <div class="toast" id="toast"></div>
+
+  <!-- ============ PANEL DE ALERTAS (campana) ============ -->
+  <div class="alerts-overlay" id="alerts-overlay"></div>
+  <aside class="alerts-panel" id="alerts-panel" aria-label="Alertas">
+    <header class="alerts-panel-header">
+      <h2>🔔 <span data-i18n="alerts.title">Alertas</span></h2>
+      <button class="icon-btn" id="alerts-close" aria-label="Cerrar">✕</button>
+    </header>
+    <div class="alerts-list" id="alerts-list"></div>
+    <button class="alerts-mark-all-btn" id="alerts-mark-all" data-i18n="alerts.markAllRead">Marcar todas como leídas</button>
+  </aside>
 </div>
 
 <script src="app.js"></script>

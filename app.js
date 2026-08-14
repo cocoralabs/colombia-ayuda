@@ -85,6 +85,10 @@ const I18N = {
     "toast.copied": "Copiado al portapapeles",
     "toast.shared": "Enlace de la organización listo para compartir",
 
+    "alerts.title": "Alertas",
+    "alerts.markAllRead": "Marcar todas como leídas",
+    "alerts.empty": "No hay alertas por ahora.",
+
     "donate.title": "Dona diferente",
     "donate.time.title": "Dona tu TIEMPO",
     "donate.time.desc": "Inscríbete como voluntario/a y ayuda en terreno con distribución de ayuda, logística y acompañamiento a las comunidades afectadas.",
@@ -246,6 +250,10 @@ const I18N = {
     "toast.updated": "Information updated",
     "toast.copied": "Copied to clipboard",
     "toast.shared": "Organization link ready to share",
+
+    "alerts.title": "Alerts",
+    "alerts.markAllRead": "Mark all as read",
+    "alerts.empty": "No alerts right now.",
 
     "donate.title": "Donate differently",
     "donate.time.title": "Donate your TIME",
@@ -857,6 +865,41 @@ const CITY_ORDER = [
 
 const ONLINE_DONATION_ORG_IDS = ["cruz-roja-colombiana", "unicef-colombia", "world-central-kitchen", "direct-relief", "global-giving"];
 
+// ========================================
+// 🔔 ALERTAS — EDITAR AQUÍ PARA ACTUALIZAR
+// Para actualizar: edita este array y haz commit en GitHub
+// Vercel actualiza la app automáticamente en ~2 minutos
+// ========================================
+const ALERTAS = [
+  {
+    id: 1,
+    tipo: "critico", // critico | urgente | info
+    emoji: "🔴",
+    titulo: "Quibdó sin agua potable",
+    descripcion: "Se necesitan filtros purificadores y agua embotellada con urgencia en el epicentro.",
+    tiempo: "Hace 10 min",
+    ciudad: "Quibdó, Chocó"
+  },
+  {
+    id: 2,
+    tipo: "urgente",
+    emoji: "🟠",
+    titulo: "Cruz Roja necesita voluntarios",
+    descripcion: "Se requieren voluntarios en Pereira para clasificación de donaciones. Inscríbete en cruzrojacolombiana.org",
+    tiempo: "Hace 1 hora",
+    ciudad: "Pereira, Risaralda"
+  },
+  {
+    id: 3,
+    tipo: "info",
+    emoji: "🟡",
+    titulo: "Nuevos puntos de acopio en Bogotá",
+    descripcion: "Se habilitaron 3 nuevos puntos en Unicentro, Codabas y Park Way. Ver sección Mapa.",
+    tiempo: "Hace 2 horas",
+    ciudad: "Bogotá, D.C."
+  }
+];
+
 /* ==========================================================================
    3. STATE
    ========================================================================== */
@@ -867,7 +910,8 @@ const state = {
   detailOrigin: "screen-home",
   activeNav: "home",
   openBloodCity: null,
-  activeCity: "todas"
+  activeCity: "todas",
+  alertsRead: false
 };
 
 /* ==========================================================================
@@ -1361,6 +1405,58 @@ function initSplashCounters() {
 }
 
 /* ==========================================================================
+   10.5 ALERTAS — panel de campana
+   ========================================================================== */
+function alertItemHTML(alerta) {
+  return `
+    <div class="alert-item alert-${alerta.tipo}">
+      <div class="alert-item-top">
+        <span class="alert-emoji">${alerta.emoji}</span>
+        <div class="alert-item-body">
+          <div class="alert-titulo">${escapeHtml(alerta.titulo)}</div>
+          <p class="alert-desc">${escapeHtml(alerta.descripcion)}</p>
+          <div class="alert-meta">
+            <span>${escapeHtml(alerta.tiempo)}</span>
+            <span class="alert-meta-dot">·</span>
+            <span>📍 ${escapeHtml(alerta.ciudad)}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderAlertsPanel() {
+  const list = document.getElementById("alerts-list");
+  if (!list) return;
+  list.innerHTML = ALERTAS.length
+    ? ALERTAS.map(alertItemHTML).join("")
+    : `<p class="alerts-empty">${t("alerts.empty")}</p>`;
+  updateAlertsBadge();
+}
+
+function updateAlertsBadge() {
+  const badge = document.getElementById("bell-badge");
+  if (!badge) return;
+  const count = ALERTAS.length;
+  badge.textContent = count;
+  badge.style.display = (!state.alertsRead && count > 0) ? "flex" : "none";
+}
+
+function openAlertsPanel() {
+  renderAlertsPanel();
+  document.getElementById("alerts-overlay").classList.add("show");
+  document.getElementById("alerts-panel").classList.add("open");
+  state.alertsRead = true;
+  updateAlertsBadge();
+}
+
+function closeAlertsPanel() {
+  document.getElementById("alerts-overlay").classList.remove("show");
+  document.getElementById("alerts-panel").classList.remove("open");
+}
+
+/* ==========================================================================
    12. MAPA — puntos de acopio
    ========================================================================== */
 function getAllPoints() {
@@ -1648,7 +1744,14 @@ function wireEvents() {
   document.getElementById("btn-colombia").addEventListener("click", () => showScreen("screen-home"));
   document.getElementById("btn-abroad").addEventListener("click", () => showScreen("screen-home"));
 
-  document.getElementById("bell-btn").addEventListener("click", () => toast(t("toast.notifications")));
+  document.getElementById("bell-btn").addEventListener("click", openAlertsPanel);
+  document.getElementById("alerts-close").addEventListener("click", closeAlertsPanel);
+  document.getElementById("alerts-overlay").addEventListener("click", closeAlertsPanel);
+  document.getElementById("alerts-mark-all").addEventListener("click", () => {
+    state.alertsRead = true;
+    updateAlertsBadge();
+    closeAlertsPanel();
+  });
   document.getElementById("refresh-btn").addEventListener("click", () => {
     document.getElementById("updated-min").textContent = "1";
     toast(t("toast.updated"));
@@ -1678,6 +1781,7 @@ function init() {
   renderMapScreen();
   renderDonationsScreen();
   renderProfileScreen();
+  renderAlertsPanel();
   initSplashCounters();
 }
 
