@@ -396,8 +396,9 @@ const ORGS = [
     needs: ["alimentos", "agua", "medicinas", "ropa", "cobijas", "colchonetas", "higiene", "sangre", "tiempo"],
     distanceKm: 2.4,
     updatedMinAgo: 3,
-    website: "https://cruzrojacolombiana.org",
-    donateUrl: "https://ayuda.cruzrojacolombiana.org/emergencia-colombia-terremoto",
+    website: "https://donar.cruzrojabogota.org.co/",
+    donateUrl: "https://ayuda.cruzrojacolombiana.org/",
+    volunteerUrl: "https://www.cruzrojacolombiana.org/voluntariado/",
     payment: [
       { label: { es: "Banco", en: "Bank" }, value: "Davivienda" },
       { label: { es: "Cuenta corriente", en: "Checking account" }, value: "0560455069996490" },
@@ -439,8 +440,8 @@ const ORGS = [
     needs: ["alimentos", "agua", "dinero"],
     distanceKm: 5.1,
     updatedMinAgo: 8,
-    website: "https://abaco.org.co",
-    donateUrl: "https://abaco.org.co/donacion",
+    website: "https://www.abaco.org.co",
+    donateUrl: "https://www.abaco.org.co",
     payment: [
       { label: { es: "Banco", en: "Bank" }, value: "Bancolombia" },
       { label: { es: "Cuenta ahorros", en: "Savings account" }, value: "04867105340" },
@@ -473,8 +474,8 @@ const ORGS = [
     needs: ["alimentos", "dinero", "tiempo"],
     distanceKm: null,
     updatedMinAgo: 12,
-    website: "https://bancodealimentos.org.co",
-    donateUrl: "https://bancodealimentos.org.co/donaciones-emergencia",
+    website: "https://www.bancodealimentosbogota.org",
+    donateUrl: "https://www.bancodealimentosbogota.org",
     payment: [
       { label: { es: "Bre-B", en: "Bre-B" }, value: "0091677852" },
       { label: { es: "Rappi", en: "Rappi" }, value: { es: "Botón de donación en la app, montos entre $20.000 y $120.000 COP", en: "Donation button in-app, amounts from COP 20,000 to 120,000" } },
@@ -497,7 +498,6 @@ const ORGS = [
     needs: ["agua", "guantes", "cascos", "colchonetas", "herramientas", "alimentos", "mascotas"],
     distanceKm: 1.2,
     updatedMinAgo: 2,
-    website: "https://www.cali.gov.co",
     payment: [
       { label: { es: "Modalidad", en: "Method" }, value: { es: "Solo donación en especie en el punto físico", en: "In-kind donations only, at the physical point" } }
     ],
@@ -521,7 +521,6 @@ const ORGS = [
     needs: ["alimentos", "agua", "ropa", "cobijas", "medicinas"],
     distanceKm: 0.8,
     updatedMinAgo: 4,
-    website: "https://www.pereira.gov.co",
     missingPersonsLine: "+57 316 478 1821",
     payment: [
       { label: { es: "Modalidad", en: "Method" }, value: { es: "7 puntos de acopio en especie distribuidos en la ciudad", en: "7 in-kind collection points across the city" } }
@@ -552,7 +551,6 @@ const ORGS = [
     needs: ["alimentos", "cobijas", "colchonetas", "sangre"],
     distanceKm: 3.6,
     updatedMinAgo: 15,
-    website: "https://www.manizales.gov.co",
     payment: [
       { label: { es: "Modalidad", en: "Method" }, value: { es: "Donación en especie en albergues y Hemocentro", en: "In-kind donations at shelters and the Blood Center" } }
     ],
@@ -579,8 +577,8 @@ const ORGS = [
     needs: ["dinero"],
     distanceKm: null,
     updatedMinAgo: 20,
-    website: "https://www.unicef.org",
-    donateUrl: "https://www.unicef.org/es/donaciones",
+    website: "https://www.unicef.org/es/donate",
+    donateUrl: "https://www.unicef.org/es/donate",
     payment: [
       { label: { es: "En línea", en: "Online" }, value: { es: "Tarjetas internacionales y PayPal (USD, EUR, GBP, CAD, AUD)", en: "International cards and PayPal (USD, EUR, GBP, CAD, AUD)" } }
     ]
@@ -601,8 +599,8 @@ const ORGS = [
     needs: ["dinero"],
     distanceKm: null,
     updatedMinAgo: 18,
-    website: "https://wck.org",
-    donateUrl: "https://wck.org/relief/colombia-earthquake-2026",
+    website: "https://wck.org/donate",
+    donateUrl: "https://wck.org/donate",
     payment: [
       { label: { es: "En línea", en: "Online" }, value: { es: "Tarjeta y transferencia (USD, EUR, MXN)", en: "Card and bank transfer (USD, EUR, MXN)" } }
     ]
@@ -623,8 +621,8 @@ const ORGS = [
     needs: ["dinero", "medicinas"],
     distanceKm: null,
     updatedMinAgo: 25,
-    website: "https://www.directrelief.org",
-    donateUrl: "https://www.directrelief.org/emergency/colombia-earthquake-response",
+    website: "https://www.directrelief.org/2026/08/colombia-choco-earthquake-emergency-response/",
+    donateUrl: "https://www.directrelief.org/2026/08/colombia-choco-earthquake-emergency-response/",
     payment: [
       { label: { es: "En línea", en: "Online" }, value: { es: "Visa, Mastercard, Amex (USD)", en: "Visa, Mastercard, Amex (USD)" } }
     ]
@@ -645,8 +643,8 @@ const ORGS = [
     needs: ["dinero", "medicinas"],
     distanceKm: null,
     updatedMinAgo: 30,
-    website: "https://www.americares.org",
-    donateUrl: "https://www.americares.org/donate/?fund=colombia-earthquake-2026",
+    website: "https://www.americares.org/donate/",
+    donateUrl: "https://www.americares.org/donate/",
     payment: [
       { label: { es: "En línea", en: "Online" }, value: { es: "Tarjetas internacionales (USD)", en: "International cards (USD)" } }
     ]
@@ -667,8 +665,8 @@ const ORGS = [
     needs: ["dinero"],
     distanceKm: null,
     updatedMinAgo: 40,
-    website: "https://www.globalgiving.org",
-    donateUrl: "https://www.globalgiving.org/projects/colombia-earthquake-relief",
+    website: "https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/",
+    donateUrl: "https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/",
     payment: [
       { label: { es: "En línea", en: "Online" }, value: { es: "PayPal, tarjetas y transferencias (USD, EUR, GBP)", en: "PayPal, cards and transfers (USD, EUR, GBP)" } }
     ]
@@ -689,7 +687,7 @@ const ORGS = [
     needs: ["dinero", "alimentos"],
     distanceKm: null,
     updatedMinAgo: 22,
-    website: "https://www.wfp.org",
+    website: "https://www.wfp.org/donate",
     donateUrl: "https://www.wfp.org/donate",
     payment: [
       { label: { es: "En línea", en: "Online" }, value: { es: "Tarjetas internacionales y PayPal (USD, EUR)", en: "International cards and PayPal (USD, EUR)" } }
@@ -711,8 +709,8 @@ const ORGS = [
     needs: ["dinero", "tiempo"],
     distanceKm: null,
     updatedMinAgo: 35,
-    website: "https://www.allhandsandhearts.org",
-    donateUrl: "https://www.allhandsandhearts.org/programs/colombia-earthquake",
+    website: "https://www.allhandsandhearts.org/donate/",
+    donateUrl: "https://www.allhandsandhearts.org/donate/",
     payment: [
       { label: { es: "En línea", en: "Online" }, value: { es: "Tarjetas internacionales (USD)", en: "International cards (USD)" } }
     ]
@@ -733,10 +731,32 @@ const ORGS = [
     needs: ["dinero"],
     distanceKm: null,
     updatedMinAgo: 45,
-    website: "https://plan.org.co",
-    donateUrl: "https://plan.org.co/donaciones-emergencia",
+    website: "https://www.planusa.org/donate/",
+    donateUrl: "https://www.planusa.org/donate/",
     payment: [
       { label: { es: "En línea", en: "Online" }, value: { es: "Tarjetas internacionales desde LATAM, EEUU y Europa", en: "International cards from LATAM, US and Europe" } }
+    ]
+  },
+  {
+    id: "gofundme-colombia",
+    urgency: "media",
+    flow: "exterior",
+    name: "GoFundMe — Terremoto Colombia",
+    categoryKey: "recuperacion",
+    logoInitials: "GF",
+    logoColor: "#00B964",
+    logoBg: "#0c3322",
+    description: {
+      es: "Recopilación verificada de campañas de recaudación para las familias y comunidades afectadas por el terremoto.",
+      en: "Verified hub of fundraising campaigns for families and communities affected by the earthquake."
+    },
+    needs: ["dinero"],
+    distanceKm: null,
+    updatedMinAgo: 28,
+    website: "https://www.gofundme.com/es-us/c/act/terremoto-colombia",
+    donateUrl: "https://www.gofundme.com/es-us/c/act/terremoto-colombia",
+    payment: [
+      { label: { es: "En línea", en: "Online" }, value: { es: "Tarjetas internacionales, PayPal y transferencia", en: "International cards, PayPal and bank transfer" } }
     ]
   },
   // ---- BLOQUE 2: Colombia Un Solo Corazón (Red Primera Dama) ----
@@ -902,7 +922,7 @@ const CITY_ORDER = [
   "Sincelejo", "Montería", "Riohacha", "Florencia", "Mocoa", "Miami", "Atlanta"
 ];
 
-const ONLINE_DONATION_ORG_IDS = ["cruz-roja-colombiana", "unicef-colombia", "world-central-kitchen", "direct-relief", "global-giving"];
+const ONLINE_DONATION_ORG_IDS = ["cruz-roja-colombiana", "unicef-colombia", "world-central-kitchen", "direct-relief", "global-giving", "gofundme-colombia"];
 
 // ========================================
 // 🔔 ALERTAS — EDITAR AQUÍ PARA ACTUALIZAR
@@ -990,7 +1010,7 @@ function escapeHtml(str) {
 }
 
 function creditFooterHTML() {
-  return `<a class="credit-footer" href="https://www.cocoralabs.com" target="_blank" rel="noopener">${t("footer.madeBy")} Cocora-Labs</a>`;
+  return `<a class="credit-footer" href="https://www.cocoralabs.com" target="_blank" rel="noopener noreferrer">${t("footer.madeBy")} Cocora-Labs</a>`;
 }
 
 function copyToClipboard(text) {
@@ -1369,7 +1389,7 @@ function renderDetail() {
   const cta = document.getElementById("detail-cta");
   cta.addEventListener("click", () => {
     if (org.donateUrl) {
-      window.open(org.donateUrl, "_blank", "noopener");
+      window.open(org.donateUrl, "_blank", "noopener,noreferrer");
     } else {
       const paymentSection = wrap.querySelector(".payment-card, .points-scroll");
       if (paymentSection) paymentSection.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1378,7 +1398,7 @@ function renderDetail() {
   });
   const moreInfo = document.getElementById("detail-more-info");
   moreInfo.addEventListener("click", () => {
-    if (org.website) window.open(org.website, "_blank", "noopener");
+    if (org.website) window.open(org.website, "_blank", "noopener,noreferrer");
     else toast(t("toast.noInfo"));
   });
 }
@@ -1436,7 +1456,11 @@ function renderDonateScreen() {
   `;
 
   wrap.querySelectorAll(".donate-orglink").forEach(el => {
-    el.addEventListener("click", () => openDetail(el.dataset.org, "screen-donate"));
+    el.addEventListener("click", () => {
+      const org = ORGS.find(o => o.id === el.dataset.org);
+      if (org && org.volunteerUrl) window.open(org.volunteerUrl, "_blank", "noopener,noreferrer");
+      else openDetail(el.dataset.org, "screen-donate");
+    });
   });
 
   wrap.querySelectorAll(".blood-chip").forEach(chip => {
@@ -1638,7 +1662,7 @@ function renderMapScreen() {
     btn.addEventListener("click", () => { window.location.href = telHref(btn.dataset.tel); });
   });
   wrap.querySelectorAll(".point-btn.viewmap").forEach(btn => {
-    btn.addEventListener("click", () => { window.open(mapsHref(btn.dataset.address, btn.dataset.city), "_blank", "noopener"); });
+    btn.addEventListener("click", () => { window.open(mapsHref(btn.dataset.address, btn.dataset.city), "_blank", "noopener,noreferrer"); });
   });
 }
 
@@ -1731,7 +1755,7 @@ function renderDonationsScreen() {
     btn.addEventListener("click", () => copyToClipboard(btn.dataset.copy));
   });
   wrap.querySelectorAll(".online-link-row").forEach(row => {
-    row.addEventListener("click", () => window.open(row.dataset.url, "_blank", "noopener"));
+    row.addEventListener("click", () => window.open(row.dataset.url, "_blank", "noopener,noreferrer"));
   });
 }
 
@@ -1792,7 +1816,7 @@ function renderProfileScreen() {
   `;
 
   document.getElementById("profile-ig").addEventListener("click", () => {
-    window.open("https://www.instagram.com/tigresasmoviendoseconcorazon", "_blank", "noopener");
+    window.open("https://www.instagram.com/tigresasmoviendoseconcorazon/", "_blank", "noopener,noreferrer");
   });
 
   document.getElementById("profile-share").addEventListener("click", () => {
