@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'
+  https://fonts.googleapis.com https://fonts.gstatic.com;
+  script-src 'self'; style-src 'self' 'unsafe-inline'
+  https://fonts.googleapis.com;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Colombia Ayuda</title>
+<meta name="theme-color" content="#FCD116">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Colombia Ayuda">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- ============ PANTALLA 1: SPLASH ============ -->
+  <section class="screen splash-screen active" id="screen-splash">
+    <div class="glow glow-yellow"></div>
+    <div class="glow glow-blue"></div>
+    <div class="glow glow-red"></div>
+
+    <div class="splash-top">
+      <button class="lang-toggle" id="lang-toggle-splash" aria-label="Idioma">
+        <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+      </button>
+      <div class="alert-badge" id="alert-badge">
+        <span class="alert-dot"></span>
+        <span data-i18n="splash.badge">TERREMOTO 7.4 — SAN JOSÉ DEL PALMAR, COLOMBIA 2026</span>
+      </div>
+    </div>
+
+    <div class="splash-content">
+      <div class="logo-wrap">
+        <svg class="logo-heart" width="72" height="72" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <clipPath id="heartClip">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#heartClip)">
+            <rect x="0" y="0" width="24" height="11" fill="#FCD116"/>
+            <rect x="0" y="11" width="24" height="5.5" fill="#003087"/>
+            <rect x="0" y="16.5" width="24" height="6.5" fill="#CE1126"/>
+          </g>
+        </svg>
+        <h1 class="logo-title">Colombia<span class="logo-accent">Ayuda</span></h1>
+        <p class="tagline" data-i18n="splash.tagline">UNIDOS SALVAMOS VIDAS</p>
+      </div>
+
+      <div class="counters">
+        <div class="counter">
+          <span class="counter-num" id="counter-people">0</span>
+          <span class="counter-label" data-i18n="splash.counter1">personas ayudadas</span>
+        </div>
+        <div class="counter-divider"></div>
+        <div class="counter">
+          <span class="counter-num" id="counter-orgs">0</span>
+          <span class="counter-label" data-i18n="splash.counter2">organizaciones activas</span>
+        </div>
+      </div>
+
+      <div class="splash-buttons">
+        <button class="btn btn-yellow btn-lg" id="btn-colombia">
+          <span>🇨🇴 <span data-i18n="splash.btnColombia">Estoy en Colombia</span></span><span class="chev">›</span>
+        </button>
+        <button class="btn btn-blue btn-lg" id="btn-abroad">
+          <span>🌐 <span data-i18n="splash.btnAbroad">I'm abroad</span></span><span class="chev">›</span>
+        </button>
+      </div>
+
+      <p class="footer-secure">🛡️ <span data-i18n="splash.footer">Plataforma segura y verificada</span></p>
+    </div>
+  </section>
+
+  <!-- ============ PANTALLA 2: PRINCIPAL ============ -->
+  <section class="screen" id="screen-home">
+    <header class="topbar">
+      <div class="topbar-brand">
+        <svg class="logo-heart-sm" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <g clip-path="url(#heartClip)">
+            <rect x="0" y="0" width="24" height="11" fill="#FCD116"/>
+            <rect x="0" y="11" width="24" height="5.5" fill="#003087"/>
+            <rect x="0" y="16.5" width="24" height="6.5" fill="#CE1126"/>
+          </g>
+        </svg>
+        <span class="topbar-title">Colombia Ayuda</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="lang-toggle sm" id="lang-toggle-home">
+          <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+        </button>
+        <button class="bell-btn" id="bell-btn" aria-label="Notificaciones">
+          🔔<span class="bell-badge">3</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="home-scroll">
+      <div class="location-row">
+        <div class="location-pill">📍 <span data-i18n="home.location">San José del Palmar, Chocó</span></div>
+        <span class="badge badge-critica" data-i18n="urgency.critica">CRÍTICO</span>
+      </div>
+
+      <div class="section-heading">
+        <h2 data-i18n="home.needHelp">Organizaciones que necesitan ayuda</h2>
+        <button class="updated-btn" id="refresh-btn">
+          <span data-i18n="home.updated">Actualizado</span> <span id="updated-min">5</span> <span data-i18n="home.minAgo">min</span> 🔄
+        </button>
+      </div>
+
+      <div class="filters" id="filters"></div>
+
+      <div class="org-list" id="org-list"></div>
+    </div>
+
+    <nav class="bottom-nav" id="bottom-nav-home"></nav>
+  </section>
+
+  <!-- ============ PANTALLA 3: DETALLE (modal) ============ -->
+  <section class="screen detail-screen" id="screen-detail">
+    <header class="detail-header">
+      <button class="icon-btn" id="detail-back" aria-label="Volver">←</button>
+      <div class="detail-header-actions">
+        <button class="icon-btn" id="detail-share" aria-label="Compartir">↗</button>
+        <button class="icon-btn" id="detail-menu" aria-label="Menú">⋮</button>
+      </div>
+    </header>
+    <div class="detail-scroll" id="detail-content"></div>
+  </section>
+
+  <!-- ============ PANTALLA 4: DONA DIFERENTE ============ -->
+  <section class="screen" id="screen-donate">
+    <header class="detail-header">
+      <button class="icon-btn" id="donate-back" aria-label="Volver">←</button>
+      <h1 class="donate-title" data-i18n="donate.title">Dona diferente</h1>
+      <button class="icon-btn" id="donate-heart" aria-label="Favoritos">♡</button>
+    </header>
+
+    <div class="donate-scroll" id="donate-content"></div>
+
+    <nav class="bottom-nav" id="bottom-nav-donate"></nav>
+  </section>
+
+  <!-- ============ PANTALLA: MAPA (puntos de acopio) ============ -->
+  <section class="screen" id="screen-map">
+    <header class="detail-header">
+      <button class="icon-btn nav-back" data-target="screen-home" aria-label="Volver">←</button>
+      <h1 class="donate-title" data-i18n="nav.map">Mapa</h1>
+      <button class="lang-toggle sm" id="lang-toggle-map">
+        <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+      </button>
+    </header>
+    <div class="map-quicknav" id="map-quicknav"></div>
+    <div class="map-scroll" id="map-content"></div>
+    <nav class="bottom-nav" id="bottom-nav-map"></nav>
+  </section>
+
+  <!-- ============ PANTALLA: DONACIONES (dinero) ============ -->
+  <section class="screen" id="screen-donations">
+    <header class="detail-header">
+      <button class="icon-btn nav-back" data-target="screen-home" aria-label="Volver">←</button>
+      <h1 class="donate-title" data-i18n="nav.donations">Donaciones</h1>
+      <button class="lang-toggle sm" id="lang-toggle-donations">
+        <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+      </button>
+    </header>
+    <div class="donations-scroll" id="donations-content"></div>
+    <nav class="bottom-nav" id="bottom-nav-donations"></nav>
+  </section>
+
+  <!-- ============ PANTALLA: PERFIL ============ -->
+  <section class="screen" id="screen-profile">
+    <header class="detail-header">
+      <button class="icon-btn nav-back" data-target="screen-home" aria-label="Volver">←</button>
+      <h1 class="donate-title" data-i18n="nav.profile">Perfil</h1>
+      <button class="lang-toggle sm" id="lang-toggle-profile">
+        <span class="lang-opt active" data-lang="es">ES</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="en">EN</span>
+      </button>
+    </header>
+    <div class="profile-scroll" id="profile-content"></div>
+    <nav class="bottom-nav" id="bottom-nav-profile"></nav>
+  </section>
+
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

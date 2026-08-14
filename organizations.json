@@ -1,0 +1,1045 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generated": "2026-08-12",
+    "emergency": "Terremoto 7.4 — San José del Palmar, Chocó",
+    "description": "Organizaciones y puntos de acopio verificados para Colombia Ayuda app",
+    "sources": [
+      "bogota.gov.co",
+      "cruzrojacolombiana.org",
+      "cambiocolombia.com",
+      "infobae.com",
+      "bloomberglinea.com",
+      "elespectador.com",
+      "telemundo.com",
+      "timeout.com",
+      "directrelief.org",
+      "americares.org"
+    ]
+  },
+
+  "organizations": [
+
+    {
+      "id": "cruz-roja-colombiana",
+      "slug": "cruz-roja-colombiana",
+      "active": true,
+      "urgency": "critica",
+      "flow": "both",
+      "name_es": "Cruz Roja Colombiana",
+      "name_en": "Colombian Red Cross",
+      "category": "emergencias",
+      "logo_initials": "CR",
+      "logo_color": "#c0392b",
+      "logo_bg": "#fdecea",
+      "description_es": "Organización humanitaria líder en la respuesta a la emergencia. Campaña #TodosPorColombia. Activa en rescate, atención médica, distribución de víveres y reunificación familiar.",
+      "description_en": "Leading humanitarian organization responding to the emergency. Campaign #TodosPorColombia. Active in rescue, medical care, food distribution and family reunification.",
+      "website": "https://cruzrojacolombiana.org",
+      "donate_url": "https://ayuda.cruzrojacolombiana.org/emergencia-colombia-terremoto",
+      "campaign_hashtag": "#TodosPorColombia",
+      "needs": ["alimentos", "agua", "medicinas", "ropa", "cobijas", "colchonetas", "higiene", "sangre"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://ayuda.cruzrojacolombiana.org/emergencia-colombia-terremoto",
+          "note_es": "Acepta tarjetas de crédito y débito internacionales (Visa, Mastercard, Amex)",
+          "note_en": "Accepts international credit and debit cards (Visa, Mastercard, Amex)"
+        },
+        "bank_transfer": {
+          "available": true,
+          "bank": "Davivienda",
+          "account_number": "0560455069996490",
+          "account_type": "corriente",
+          "account_holder": "Sociedad Nacional de la Cruz Roja Colombiana",
+          "nit": "899999025-3"
+        },
+        "daviplata": {
+          "available": true,
+          "instructions_es": "Descargar app Daviplata → Pagos y servicios → Otros servicios → Cruz Roja Colombiana"
+        }
+      },
+      "collection_points": [
+        {
+          "city": "bogota",
+          "name": "Sede administrativa Cruz Roja",
+          "address": "Carrera 24 #73-38",
+          "neighborhood": "Palermo",
+          "hours": "24 horas",
+          "hours_24": true,
+          "lat": 4.6567,
+          "lng": -74.0817,
+          "accepts": ["alimentos", "agua", "ropa", "medicinas", "cobijas", "colchonetas"]
+        },
+        {
+          "city": "bogota",
+          "name": "Bodega Cruz Roja",
+          "address": "Diagonal 79B #62-53",
+          "neighborhood": "Normandía",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.6893,
+          "lng": -74.1017,
+          "accepts": ["alimentos", "agua", "ropa", "cobijas"]
+        },
+        {
+          "city": "bogota",
+          "name": "SAMU Sur",
+          "address": "Av. Carrera 68 #31-41 sur",
+          "neighborhood": "Kennedy",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.6052,
+          "lng": -74.1228,
+          "accepts": ["alimentos", "agua", "medicinas"]
+        },
+        {
+          "city": "bogota",
+          "name": "SAMU Norte",
+          "address": "Calle 134 – Carrera 7B Bis #132-31",
+          "neighborhood": "Usaquén",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.7407,
+          "lng": -74.0391,
+          "accepts": ["alimentos", "agua", "medicinas"]
+        },
+        {
+          "city": "bogota",
+          "name": "Centro de Salvamento Acuático",
+          "address": "Av. La Esmeralda #63-81",
+          "neighborhood": "Engativá",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.6958,
+          "lng": -74.1138,
+          "accepts": ["alimentos", "agua", "cobijas"]
+        },
+        {
+          "city": "bogota",
+          "name": "Palacio de los Deportes",
+          "address": "Calle 63 #59A-06",
+          "neighborhood": "Palermo",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.6598,
+          "lng": -74.1025,
+          "accepts": ["alimentos", "ropa", "cobijas", "higiene"]
+        },
+        {
+          "city": "bogota",
+          "name": "Universidad Jorge Tadeo Lozano",
+          "address": "Carrera 4 #22-61",
+          "neighborhood": "Santa Fe",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.6121,
+          "lng": -74.0699,
+          "accepts": ["alimentos", "ropa", "higiene"]
+        },
+        {
+          "city": "bogota",
+          "name": "Unicentro",
+          "address": "Carrera 15 #124-30",
+          "neighborhood": "Usaquén",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.7090,
+          "lng": -74.0501,
+          "accepts": ["alimentos", "ropa", "cobijas", "higiene"]
+        },
+        {
+          "city": "bogota",
+          "name": "Punto Usaquén",
+          "address": "Calle 161A #7F-55",
+          "neighborhood": "Usaquén",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.7635,
+          "lng": -74.0334,
+          "accepts": ["alimentos", "ropa"]
+        },
+        {
+          "city": "medellin",
+          "name": "Sede Medellín Cruz Roja",
+          "address": "Carrera 52 #25-310",
+          "neighborhood": "Guayabal",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 6.2283,
+          "lng": -75.5996,
+          "accepts": ["alimentos", "agua", "medicinas", "ropa"]
+        },
+        {
+          "city": "cartagena",
+          "name": "Sede Cartagena Cruz Roja",
+          "address": "Calle 30 #44D-71",
+          "neighborhood": "Manga",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 10.4052,
+          "lng": -75.5378,
+          "accepts": ["alimentos", "agua"]
+        },
+        {
+          "city": "manizales",
+          "name": "Cancha Auxiliar Palogrande — Cruz Roja",
+          "address": "Junto a la estación de Bomberos Palogrande",
+          "neighborhood": "Palogrande",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 5.0622,
+          "lng": -75.4929,
+          "accepts": ["alimentos", "ropa", "cobijas", "sangre"]
+        },
+        {
+          "city": "armenia",
+          "name": "Sede Armenia Cruz Roja",
+          "address": "Av. Bolívar #23norte-60",
+          "neighborhood": "Centro",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 4.5353,
+          "lng": -75.6811,
+          "accepts": ["alimentos", "agua", "medicinas"]
+        },
+        {
+          "city": "cali",
+          "name": "Banco de Sangre Imbanaco",
+          "address": "Carrera 38 Bis #5B2-04, Santa Isabel",
+          "neighborhood": "Santa Isabel",
+          "hours": "7:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 3.3920,
+          "lng": -76.5434,
+          "accepts": ["sangre"]
+        },
+        {
+          "city": "villavicencio",
+          "name": "Sede Villavicencio Cruz Roja",
+          "address": "Carrera 30 #39-30",
+          "neighborhood": "Centro",
+          "hours": "8:00 am – 5:00 pm",
+          "hours_24": false,
+          "lat": 4.1436,
+          "lng": -73.6363,
+          "accepts": ["alimentos", "ropa"]
+        }
+      ]
+    },
+
+    {
+      "id": "alcaldia-bogota",
+      "slug": "alcaldia-bogota",
+      "active": true,
+      "urgency": "alta",
+      "flow": "colombia",
+      "name_es": "Alcaldía Mayor de Bogotá",
+      "name_en": "Bogotá Mayor's Office",
+      "category": "gobierno",
+      "logo_initials": "AB",
+      "logo_color": "#1a5276",
+      "logo_bg": "#e8f4fd",
+      "description_es": "El Distrito habilitó puntos adicionales de acopio en alianza con la Cruz Roja. Donaciones para ciudades afectadas: Cali, Manizales, Pereira y Quibdó.",
+      "description_en": "The District opened additional collection points in partnership with the Red Cross. Donations for affected cities: Cali, Manizales, Pereira and Quibdó.",
+      "website": "https://bogota.gov.co",
+      "donate_url": "https://bogota.gov.co/mi-ciudad/seguridad/puntos-de-donacion-en-bogota-para-damnificados-terremoto-en-colombia",
+      "needs": ["alimentos", "agua", "cobijas", "colchonetas", "higiene", "ropa"],
+      "donation_methods": {
+        "in_person": {
+          "available": true,
+          "note_es": "Llevar especie directamente a los puntos de acopio habilitados"
+        }
+      },
+      "collection_points": [
+        {
+          "city": "bogota",
+          "name": "Codabas",
+          "address": "Carrera 7 #180-75, Módulo 2 Piso 2",
+          "neighborhood": "Codabas",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.7720,
+          "lng": -74.0428,
+          "accepts": ["alimentos", "agua"]
+        },
+        {
+          "city": "bogota",
+          "name": "La Castellana",
+          "address": "Carrera 47 #94-68",
+          "neighborhood": "La Castellana",
+          "hours": "8:00 am – 9:00 pm",
+          "hours_24": false,
+          "lat": 4.6870,
+          "lng": -74.0812,
+          "accepts": ["alimentos", "ropa", "cobijas"]
+        }
+      ]
+    },
+
+    {
+      "id": "abaco",
+      "slug": "abaco",
+      "active": true,
+      "urgency": "alta",
+      "flow": "both",
+      "name_es": "ABACO — Bancos de Alimentos Colombia",
+      "name_en": "ABACO — Colombian Food Banks Association",
+      "category": "alimentos",
+      "logo_initials": "AB",
+      "logo_color": "#d68910",
+      "logo_bg": "#fff4e5",
+      "description_es": "Asociación de Bancos de Alimentos de Colombia. Coordina el corredor humanitario de alimentos hacia las zonas afectadas. Activa en Armenia, Cali, Manizales, Medellín e Ibagué.",
+      "description_en": "Association of Colombian Food Banks. Coordinates the humanitarian food corridor to affected areas. Active in Armenia, Cali, Manizales, Medellín and Ibagué.",
+      "website": "https://abaco.org.co",
+      "donate_url": "https://abaco.org.co/donacion",
+      "whatsapp": "3132457978",
+      "needs": ["alimentos", "agua", "dinero"],
+      "donation_methods": {
+        "bank_transfer": {
+          "available": true,
+          "bank": "Bancolombia",
+          "account_number": "04867105340",
+          "account_type": "ahorros",
+          "account_holder": "Asociación de Bancos de Alimentos de Colombia – Abaco",
+          "nit": "900326456-1"
+        },
+        "breb": {
+          "available": true,
+          "key": "0090989753",
+          "bank": "Bancolombia"
+        },
+        "whatsapp": {
+          "available": true,
+          "number": "3132457978",
+          "note_es": "Para donaciones en especie de mayor volumen o productos priorizados"
+        }
+      },
+      "collection_points": [
+        {
+          "city": "armenia",
+          "name": "Banco de Alimentos Monseñor Roberto López Londoño",
+          "address": "Armenia, Quindío — dirección verificar en sitio oficial",
+          "hours": "8:00 am – 5:00 pm",
+          "hours_24": false,
+          "lat": 4.5390,
+          "lng": -75.6742,
+          "accepts": ["alimentos", "agua"]
+        },
+        {
+          "city": "cali",
+          "name": "Fundación Arquidiocesana Banco de Alimentos",
+          "address": "Cali, Valle del Cauca — dirección verificar en sitio oficial",
+          "hours": "8:00 am – 5:00 pm",
+          "hours_24": false,
+          "lat": 3.4516,
+          "lng": -76.5320,
+          "accepts": ["alimentos"]
+        },
+        {
+          "city": "manizales",
+          "name": "Banco de Alimentos de Manizales",
+          "address": "Manizales, Caldas — dirección verificar en sitio oficial",
+          "hours": "8:00 am – 5:00 pm",
+          "hours_24": false,
+          "lat": 5.0710,
+          "lng": -75.5138,
+          "accepts": ["alimentos"]
+        },
+        {
+          "city": "medellin",
+          "name": "Fundación Banco Arquidiocesano (FUBAM)",
+          "address": "Carrera 52 #30A-97",
+          "neighborhood": "Guayabal",
+          "hours": "8:00 am – 5:00 pm",
+          "hours_24": false,
+          "lat": 6.2270,
+          "lng": -75.5862,
+          "accepts": ["alimentos"]
+        },
+        {
+          "city": "medellin",
+          "name": "Fundación Saciar",
+          "address": "Carrera 50 #25-261",
+          "neighborhood": "Centro",
+          "hours": "8:00 am – 5:00 pm",
+          "hours_24": false,
+          "lat": 6.2467,
+          "lng": -75.5634,
+          "accepts": ["alimentos"]
+        },
+        {
+          "city": "ibague",
+          "name": "Banco Arquidiocesano de Alimentos de Ibagué",
+          "address": "Ibagué, Tolima — dirección verificar en sitio oficial",
+          "hours": "8:00 am – 5:00 pm",
+          "hours_24": false,
+          "lat": 4.4389,
+          "lng": -75.2322,
+          "accepts": ["alimentos"]
+        }
+      ]
+    },
+
+    {
+      "id": "banco-alimentos-bogota",
+      "slug": "banco-alimentos-bogota",
+      "active": true,
+      "urgency": "alta",
+      "flow": "both",
+      "name_es": "Banco de Alimentos de Bogotá",
+      "name_en": "Bogotá Food Bank",
+      "category": "alimentos",
+      "logo_initials": "BA",
+      "logo_color": "#1e8449",
+      "logo_bg": "#eafaf1",
+      "description_es": "Activó campaña de emergencia. Acepta donaciones internacionales vía web. Plataforma Rappi habilitó botón de donación integrado con este banco de alimentos (montos entre $20.000 y $120.000 COP).",
+      "description_en": "Activated emergency campaign. Accepts international donations via web. Rappi platform enabled a donation button linked to this food bank (amounts from COP 20,000 to 120,000).",
+      "website": "https://bancodealimentos.org.co",
+      "donate_url": "https://bancodealimentos.org.co/donaciones-emergencia",
+      "needs": ["alimentos", "dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://bancodealimentos.org.co/donaciones-emergencia",
+          "note_es": "Acepta donaciones internacionales desde la web"
+        },
+        "breb": {
+          "available": true,
+          "key": "0091677852",
+          "bank": "Bancolombia"
+        },
+        "rappi": {
+          "available": true,
+          "note_es": "Botón de donación disponible dentro de la app Rappi. Montos: $20.000 a $120.000 COP"
+        }
+      },
+      "collection_points": []
+    },
+
+    {
+      "id": "alcaldia-cali",
+      "slug": "alcaldia-cali",
+      "active": true,
+      "urgency": "critica",
+      "flow": "colombia",
+      "name_es": "Alcaldía de Cali — Punto Jairo Varela",
+      "name_en": "Cali City Hall — Jairo Varela Plaza",
+      "category": "gobierno",
+      "logo_initials": "CA",
+      "logo_color": "#993556",
+      "logo_bg": "#fbeaf0",
+      "description_es": "Cali es la ciudad más afectada. La Alcaldía habilitó la Plazoleta Jairo Varela como punto central. Se necesitan materiales para rescatistas: guantes, cascos, agua, gafas de seguridad, colchonetas.",
+      "description_en": "Cali is the most affected city with 56 buildings collapsed. The Plazoleta Jairo Varela is the main collection point. Urgently needed: gloves, helmets, water, safety glasses, mattresses.",
+      "website": "https://www.cali.gov.co",
+      "donate_url": "https://www.cali.gov.co",
+      "needs": ["agua", "guantes", "cascos", "colchonetas", "herramientas", "alimentos"],
+      "donation_methods": {
+        "in_person": {
+          "available": true,
+          "note_es": "Solo donación en especie en el punto físico"
+        }
+      },
+      "collection_points": [
+        {
+          "city": "cali",
+          "name": "Plazoleta Jairo Varela",
+          "address": "Plazoleta Jairo Varela, Cali",
+          "neighborhood": "Centro",
+          "hours": "8:00 am – 8:00 pm",
+          "hours_24": false,
+          "lat": 3.4516,
+          "lng": -76.5320,
+          "accepts": ["agua", "guantes", "cascos", "colchonetas", "alimentos"]
+        }
+      ]
+    },
+
+    {
+      "id": "alcaldia-pereira",
+      "slug": "alcaldia-pereira",
+      "active": true,
+      "urgency": "critica",
+      "flow": "colombia",
+      "name_es": "Alcaldía de Pereira",
+      "name_en": "Pereira City Hall",
+      "category": "gobierno",
+      "logo_initials": "PE",
+      "logo_color": "#854F0B",
+      "logo_bg": "#FAEEDA",
+      "description_es": "Pereira es la ciudad con más víctimas mortales. 7 puntos de acopio distribuidos en barrios y comunas. Línea de personas desaparecidas: +57 316 478 1821.",
+      "description_en": "Pereira has the highest death toll. 7 collection points distributed across neighborhoods. Missing persons line: +57 316 478 1821.",
+      "website": "https://www.pereira.gov.co",
+      "donate_url": "https://www.pereira.gov.co",
+      "missing_persons_line": "+57 316 478 1821",
+      "needs": ["alimentos", "agua", "ropa", "cobijas", "medicinas"],
+      "donation_methods": {
+        "in_person": {
+          "available": true,
+          "note_es": "7 puntos de acopio distribuidos en la ciudad"
+        }
+      },
+      "collection_points": [
+        {
+          "city": "pereira",
+          "name": "Café Consota",
+          "address": "Manzanas 7 y 8, barrio Villa Consota, Cuba",
+          "neighborhood": "Cuba",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 4.7923,
+          "lng": -75.7075,
+          "accepts": ["alimentos", "agua", "ropa"]
+        },
+        {
+          "city": "pereira",
+          "name": "Café Perla del Otún",
+          "address": "Diagonal a la iglesia de los 2.500 Lotes, Cuba",
+          "neighborhood": "Cuba",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 4.7899,
+          "lng": -75.7102,
+          "accepts": ["alimentos", "agua"]
+        },
+        {
+          "city": "pereira",
+          "name": "Café El Remanso",
+          "address": "Av. principal barrio El Remanso, al lado del Centro de Salud",
+          "neighborhood": "El Remanso",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 4.8011,
+          "lng": -75.6943,
+          "accepts": ["alimentos", "medicinas"]
+        },
+        {
+          "city": "pereira",
+          "name": "Café Kennedy",
+          "address": "Parque principal barrio Kennedy",
+          "neighborhood": "Kennedy",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 4.8122,
+          "lng": -75.6987,
+          "accepts": ["alimentos", "agua"]
+        },
+        {
+          "city": "pereira",
+          "name": "Café Ormaza",
+          "address": "Calle 3 Bis 5-38, Avenida del Río",
+          "neighborhood": "Avenida del Río",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 4.8168,
+          "lng": -75.6952,
+          "accepts": ["alimentos", "ropa"]
+        },
+        {
+          "city": "pereira",
+          "name": "Café San Nicolás",
+          "address": "Carrera 14 Bis #28-38, antigua estación de Policía",
+          "neighborhood": "San Nicolás",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 4.8205,
+          "lng": -75.7001,
+          "accepts": ["alimentos", "cobijas"]
+        },
+        {
+          "city": "pereira",
+          "name": "Café Comuna del Café",
+          "address": "Carrera 3 con Calle 59A, sector A del Parque Industrial",
+          "neighborhood": "Parque Industrial",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 4.7941,
+          "lng": -75.6820,
+          "accepts": ["alimentos", "agua", "cobijas"]
+        }
+      ]
+    },
+
+    {
+      "id": "alcaldia-manizales",
+      "slug": "alcaldia-manizales",
+      "active": true,
+      "urgency": "alta",
+      "flow": "colombia",
+      "name_es": "Alcaldía de Manizales",
+      "name_en": "Manizales City Hall",
+      "category": "gobierno",
+      "logo_initials": "MZ",
+      "logo_color": "#0F6E56",
+      "logo_bg": "#E1F5EE",
+      "description_es": "Manizales habilitó tres albergues temporales y el Hemocentro del Café para donación de sangre. Prioridad: sangre tipo O+ y O-.",
+      "description_en": "Manizales opened three temporary shelters and the Hemocentro del Café for blood donation. Priority: blood type O+ and O-.",
+      "website": "https://www.manizales.gov.co",
+      "donate_url": "https://www.manizales.gov.co",
+      "needs": ["alimentos", "cobijas", "colchonetas", "sangre"],
+      "donation_methods": {
+        "in_person": {
+          "available": true,
+          "note_es": "Albergues y punto de sangre disponibles"
+        }
+      },
+      "collection_points": [
+        {
+          "city": "manizales",
+          "name": "Coliseo Mayor — Albergue",
+          "address": "Coliseo Mayor de Manizales",
+          "neighborhood": "Centro",
+          "hours": "24 horas",
+          "hours_24": true,
+          "lat": 5.0680,
+          "lng": -75.5143,
+          "accepts": ["alimentos", "cobijas", "colchonetas"]
+        },
+        {
+          "city": "manizales",
+          "name": "Coliseo Menor — Albergue",
+          "address": "Coliseo Menor de Manizales",
+          "neighborhood": "Centro",
+          "hours": "24 horas",
+          "hours_24": true,
+          "lat": 5.0672,
+          "lng": -75.5139,
+          "accepts": ["alimentos", "cobijas"]
+        },
+        {
+          "city": "manizales",
+          "name": "SIC de Aranjuez — Albergue",
+          "address": "SIC Aranjuez, Manizales",
+          "neighborhood": "Aranjuez",
+          "hours": "24 horas",
+          "hours_24": true,
+          "lat": 5.0551,
+          "lng": -75.4918,
+          "accepts": ["alimentos", "cobijas", "colchonetas"]
+        },
+        {
+          "city": "manizales",
+          "name": "Hemocentro del Café",
+          "address": "Hemocentro del Café, Manizales",
+          "neighborhood": "Centro",
+          "hours": "7:00 am – 5:00 pm",
+          "hours_24": false,
+          "lat": 5.0699,
+          "lng": -75.5132,
+          "accepts": ["sangre"],
+          "blood_priority": ["O+", "O-"]
+        }
+      ]
+    },
+
+    {
+      "id": "alcaldia-barranquilla",
+      "slug": "alcaldia-barranquilla",
+      "active": true,
+      "urgency": "media",
+      "flow": "colombia",
+      "name_es": "Alcaldía de Barranquilla",
+      "name_en": "Barranquilla City Hall",
+      "category": "gobierno",
+      "logo_initials": "BQ",
+      "logo_color": "#185FA5",
+      "logo_bg": "#E6F1FB",
+      "description_es": "La Oficina Distrital de Gestión del Riesgo coordina la recepción y el traslado de ayudas hacia las zonas más afectadas.",
+      "description_en": "The District Risk Management Office coordinates the receipt and transfer of aid to the most affected areas.",
+      "website": "https://www.barranquilla.gov.co",
+      "donate_url": "https://www.barranquilla.gov.co",
+      "needs": ["alimentos", "agua", "medicinas", "higiene", "ropa", "colchonetas"],
+      "donation_methods": {
+        "in_person": {
+          "available": true
+        }
+      },
+      "collection_points": [
+        {
+          "city": "barranquilla",
+          "name": "Centro de Recepción Barranquillita",
+          "address": "Carrera 43 #6-120, sector Barranquillita",
+          "neighborhood": "Barranquillita",
+          "hours": "8:00 am – 6:00 pm",
+          "hours_24": false,
+          "lat": 10.9878,
+          "lng": -74.8073,
+          "accepts": ["alimentos", "agua", "medicinas", "higiene", "ropa", "colchonetas"]
+        }
+      ]
+    },
+
+    {
+      "id": "unicef-colombia",
+      "slug": "unicef-colombia",
+      "active": true,
+      "urgency": "alta",
+      "flow": "exterior",
+      "name_es": "UNICEF Colombia",
+      "name_en": "UNICEF Colombia",
+      "category": "infancia",
+      "logo_initials": "UN",
+      "logo_color": "#185FA5",
+      "logo_bg": "#E6F1FB",
+      "description_es": "Organización de la ONU enfocada en proteger a los niños afectados. Acepta donaciones desde más de 190 países. Los equipos de la ONU están coordinando con autoridades colombianas y la UNGRD.",
+      "description_en": "UN organization focused on protecting affected children. Accepts donations from more than 190 countries. UN teams are coordinating with Colombian authorities and UNGRD.",
+      "website": "https://www.unicef.org",
+      "donate_url": "https://www.unicef.org/es/donaciones",
+      "needs": ["dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://www.unicef.org/es/donaciones",
+          "currencies": ["USD", "EUR", "GBP", "CAD", "AUD"],
+          "note_es": "Acepta tarjetas internacionales y PayPal en múltiples monedas"
+        }
+      },
+      "collection_points": []
+    },
+
+    {
+      "id": "world-central-kitchen",
+      "slug": "world-central-kitchen",
+      "active": true,
+      "urgency": "alta",
+      "flow": "exterior",
+      "name_es": "World Central Kitchen",
+      "name_en": "World Central Kitchen",
+      "category": "alimentacion",
+      "logo_initials": "WK",
+      "logo_color": "#1e8449",
+      "logo_bg": "#eafaf1",
+      "description_es": "Fundada por el chef José Andrés. Proporciona comidas frescas de emergencia. Trabaja con cocineros y organizaciones locales. Acepta donaciones desde México, EEUU, España y toda Latinoamérica.",
+      "description_en": "Founded by Chef José Andrés. Provides fresh emergency meals. Works with local cooks and organizations. Accepts donations from Mexico, USA, Spain and all of Latin America.",
+      "website": "https://wck.org",
+      "donate_url": "https://wck.org/relief/colombia-earthquake-2026",
+      "needs": ["dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://wck.org/relief/colombia-earthquake-2026",
+          "currencies": ["USD", "EUR", "MXN"],
+          "note_es": "Tarjeta de crédito o débito. También acepta transferencia bancaria desde México"
+        }
+      },
+      "collection_points": []
+    },
+
+    {
+      "id": "direct-relief",
+      "slug": "direct-relief",
+      "active": true,
+      "urgency": "alta",
+      "flow": "exterior",
+      "name_es": "Direct Relief",
+      "name_en": "Direct Relief",
+      "category": "salud",
+      "logo_initials": "DR",
+      "logo_color": "#d68910",
+      "logo_bg": "#fff4e5",
+      "description_es": "Organización humanitaria internacional de salud. Provee medicamentos y suministros médicos a centros de salud locales en Cali y Pereira. Verificada por Telemundo.",
+      "description_en": "International humanitarian health organization. Provides medicines and medical supplies to local health centers in Cali and Pereira. Verified by Telemundo.",
+      "website": "https://www.directrelief.org",
+      "donate_url": "https://www.directrelief.org/emergency/colombia-earthquake-response",
+      "needs": ["dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://www.directrelief.org/emergency/colombia-earthquake-response",
+          "currencies": ["USD"],
+          "note_es": "Acepta Visa, Mastercard, Amex y donaciones de empresas con deducción fiscal en EEUU"
+        }
+      },
+      "collection_points": []
+    },
+
+    {
+      "id": "americares",
+      "slug": "americares",
+      "active": true,
+      "urgency": "alta",
+      "flow": "exterior",
+      "name_es": "Americares",
+      "name_en": "Americares",
+      "category": "salud",
+      "logo_initials": "AM",
+      "logo_color": "#c0392b",
+      "logo_bg": "#fdecea",
+      "description_es": "Organización de salud y desastres con equipos en Bogotá y Barranquilla. Equipo desplegado en Cali evaluando necesidades. Provee medicamentos, suministros médicos y fondos de emergencia.",
+      "description_en": "Health and disaster organization with teams in Bogotá and Barranquilla. Team deployed to Cali assessing needs. Provides medicines, medical supplies and emergency funding.",
+      "website": "https://www.americares.org",
+      "donate_url": "https://www.americares.org/donate/?fund=colombia-earthquake-2026",
+      "needs": ["dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://www.americares.org/donate/?fund=colombia-earthquake-2026",
+          "currencies": ["USD"],
+          "note_es": "Acepta tarjetas internacionales. ONG con calificación máxima en transparencia (Charity Navigator)"
+        }
+      },
+      "collection_points": []
+    },
+
+    {
+      "id": "global-giving",
+      "slug": "global-giving",
+      "active": true,
+      "urgency": "media",
+      "flow": "exterior",
+      "name_es": "GlobalGiving — Recuperación Colombia",
+      "name_en": "GlobalGiving — Colombia Recovery",
+      "category": "recuperacion",
+      "logo_initials": "GG",
+      "logo_color": "#534AB7",
+      "logo_bg": "#EEEDFE",
+      "description_es": "Plataforma de donaciones para recuperación a largo plazo. Fondos distribuidos entre organizaciones locales verificadas. Permite donaciones recurrentes.",
+      "description_en": "Donation platform for long-term recovery. Funds distributed among verified local organizations. Allows recurring donations.",
+      "website": "https://www.globalgiving.org",
+      "donate_url": "https://www.globalgiving.org/projects/colombia-earthquake-relief",
+      "needs": ["dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://www.globalgiving.org/projects/colombia-earthquake-relief",
+          "currencies": ["USD", "EUR", "GBP"],
+          "note_es": "Acepta PayPal, tarjetas y transferencias. Deducible de impuestos en EEUU y UK"
+        }
+      },
+      "collection_points": []
+    },
+
+    {
+      "id": "wfp-colombia",
+      "slug": "wfp-colombia",
+      "active": true,
+      "urgency": "alta",
+      "flow": "exterior",
+      "name_es": "Programa Mundial de Alimentos — Colombia",
+      "name_en": "World Food Programme — Colombia",
+      "category": "alimentacion",
+      "logo_initials": "WF",
+      "logo_color": "#854F0B",
+      "logo_bg": "#FAEEDA",
+      "description_es": "Trabaja con autoridades colombianas para atender la inseguridad alimentaria. Distribuye raciones de comida en albergues y zonas de difícil acceso.",
+      "description_en": "Works with Colombian authorities to address food insecurity. Distributes food rations in shelters and hard-to-reach areas.",
+      "website": "https://www.wfp.org",
+      "donate_url": "https://www.wfp.org/donate",
+      "needs": ["dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://www.wfp.org/donate",
+          "currencies": ["USD", "EUR"],
+          "note_es": "Agencia de la ONU. Acepta tarjetas internacionales y PayPal"
+        }
+      },
+      "collection_points": []
+    },
+
+    {
+      "id": "all-hands-hearts",
+      "slug": "all-hands-hearts",
+      "active": true,
+      "urgency": "media",
+      "flow": "exterior",
+      "name_es": "All Hands & Hearts",
+      "name_en": "All Hands & Hearts",
+      "category": "rescate",
+      "logo_initials": "AH",
+      "logo_color": "#0F6E56",
+      "logo_bg": "#E1F5EE",
+      "description_es": "Organización de voluntarios de rescate. Reportada en Colombia desde el lunes 10 de agosto, apoyando equipos de emergencia con equipamiento especializado.",
+      "description_en": "Volunteer rescue organization. Reported in Colombia since Monday August 10, supporting emergency teams with specialized equipment.",
+      "website": "https://www.allhandsandhearts.org",
+      "donate_url": "https://www.allhandsandhearts.org/programs/colombia-earthquake",
+      "needs": ["dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://www.allhandsandhearts.org/programs/colombia-earthquake",
+          "currencies": ["USD"],
+          "note_es": "Acepta tarjetas internacionales"
+        }
+      },
+      "collection_points": []
+    },
+
+    {
+      "id": "fundacion-plan-colombia",
+      "slug": "fundacion-plan-colombia",
+      "active": true,
+      "urgency": "media",
+      "flow": "exterior",
+      "name_es": "Fundación Plan Colombia",
+      "name_en": "Plan International Colombia",
+      "category": "infancia",
+      "logo_initials": "PL",
+      "logo_color": "#c0392b",
+      "logo_bg": "#fdecea",
+      "description_es": "ONG internacional activa en Colombia. Acepta donaciones desde el extranjero para familias afectadas, con enfoque en niños y mujeres. Campaña 'Colombia se levanta'.",
+      "description_en": "International NGO active in Colombia. Accepts donations from abroad for affected families, focusing on children and women. Campaign 'Colombia rises'.",
+      "website": "https://plan.org.co",
+      "donate_url": "https://plan.org.co/donaciones-emergencia",
+      "needs": ["dinero"],
+      "donation_methods": {
+        "online_card": {
+          "available": true,
+          "accepts_international": true,
+          "url": "https://plan.org.co/donaciones-emergencia",
+          "note_es": "Acepta tarjetas internacionales desde LATAM, EEUU y Europa"
+        }
+      },
+      "collection_points": []
+    }
+
+  ],
+
+  "cities": [
+    {
+      "id": "bogota",
+      "name_es": "Bogotá",
+      "name_en": "Bogotá",
+      "department": "Cundinamarca",
+      "lat": 4.7110,
+      "lng": -74.0721,
+      "urgency": "alta",
+      "active_points_count": 9,
+      "status_note_es": "Ciudad no afectada directamente. 9 puntos activos para recolección y envío a zonas de desastre."
+    },
+    {
+      "id": "cali",
+      "name_es": "Cali",
+      "name_en": "Cali",
+      "department": "Valle del Cauca",
+      "lat": 3.4516,
+      "lng": -76.5320,
+      "urgency": "critica",
+      "active_points_count": 3,
+      "status_note_es": "Zona de desastre. 56 edificios colapsados. Recibe ayuda y la distribuye localmente."
+    },
+    {
+      "id": "pereira",
+      "name_es": "Pereira",
+      "name_en": "Pereira",
+      "department": "Risaralda",
+      "lat": 4.8143,
+      "lng": -75.6961,
+      "urgency": "critica",
+      "active_points_count": 7,
+      "status_note_es": "Ciudad más afectada en fallecidos. 7 puntos activos. Línea desaparecidos: +57 316 478 1821."
+    },
+    {
+      "id": "manizales",
+      "name_es": "Manizales",
+      "name_en": "Manizales",
+      "department": "Caldas",
+      "lat": 5.0689,
+      "lng": -75.5174,
+      "urgency": "alta",
+      "active_points_count": 4,
+      "status_note_es": "3 albergues temporales + Hemocentro del Café. Prioridad sangre O+ y O-."
+    },
+    {
+      "id": "armenia",
+      "name_es": "Armenia",
+      "name_en": "Armenia",
+      "department": "Quindío",
+      "lat": 4.5390,
+      "lng": -75.6742,
+      "urgency": "alta",
+      "active_points_count": 2,
+      "status_note_es": "Punto ABACO y sede Cruz Roja activos."
+    },
+    {
+      "id": "medellin",
+      "name_es": "Medellín",
+      "name_en": "Medellín",
+      "department": "Antioquia",
+      "lat": 6.2442,
+      "lng": -75.5812,
+      "urgency": "media",
+      "active_points_count": 3,
+      "status_note_es": "Ciudad no afectada. Punto intermediario de ABACO: FUBAM y Fundación Saciar."
+    },
+    {
+      "id": "barranquilla",
+      "name_es": "Barranquilla",
+      "name_en": "Barranquilla",
+      "department": "Atlántico",
+      "lat": 10.9878,
+      "lng": -74.8073,
+      "urgency": "media",
+      "active_points_count": 1,
+      "status_note_es": "Centro de recepción Barranquillita habilitado por la Alcaldía."
+    },
+    {
+      "id": "ibague",
+      "name_es": "Ibagué",
+      "name_en": "Ibagué",
+      "department": "Tolima",
+      "lat": 4.4389,
+      "lng": -75.2322,
+      "urgency": "media",
+      "active_points_count": 1,
+      "status_note_es": "Banco Arquidiocesano de Alimentos activo como punto ABACO."
+    }
+  ],
+
+  "needs_catalog": {
+    "alimentos":   { "label_es": "Alimentos",    "label_en": "Food",            "icon": "ti-basket",         "color": "#1e8449", "bg": "#eafaf1" },
+    "agua":        { "label_es": "Agua",          "label_en": "Water",           "icon": "ti-droplet",        "color": "#1a5276", "bg": "#e8f4fd" },
+    "medicinas":   { "label_es": "Medicinas",     "label_en": "Medicine",        "icon": "ti-pill",           "color": "#c0392b", "bg": "#fdecea" },
+    "ropa":        { "label_es": "Ropa",          "label_en": "Clothing",        "icon": "ti-shirt",          "color": "#534AB7", "bg": "#EEEDFE" },
+    "cobijas":     { "label_es": "Cobijas",       "label_en": "Blankets",        "icon": "ti-bed",            "color": "#854F0B", "bg": "#FAEEDA" },
+    "colchonetas": { "label_es": "Colchonetas",   "label_en": "Mattresses",      "icon": "ti-bed-flat",       "color": "#854F0B", "bg": "#FAEEDA" },
+    "higiene":     { "label_es": "Aseo personal", "label_en": "Hygiene",         "icon": "ti-wash",           "color": "#0F6E56", "bg": "#E1F5EE" },
+    "sangre":      { "label_es": "Sangre",        "label_en": "Blood",           "icon": "ti-droplet-filled", "color": "#c0392b", "bg": "#fdecea" },
+    "dinero":      { "label_es": "Dinero",        "label_en": "Money",           "icon": "ti-credit-card",    "color": "#185FA5", "bg": "#E6F1FB" },
+    "mascotas":    { "label_es": "Mascotas",      "label_en": "Pets",            "icon": "ti-paw",            "color": "#d68910", "bg": "#fff4e5" },
+    "guantes":     { "label_es": "Guantes",       "label_en": "Gloves",          "icon": "ti-hand-grab",      "color": "#d68910", "bg": "#fff4e5" },
+    "cascos":      { "label_es": "Cascos",        "label_en": "Helmets",         "icon": "ti-helmet",         "color": "#d68910", "bg": "#fff4e5" },
+    "herramientas":{ "label_es": "Herramientas",  "label_en": "Tools",           "icon": "ti-tool",           "color": "#444441", "bg": "#F1EFE8" }
+  },
+
+  "alerts": [
+    {
+      "id": "alert-estafas",
+      "type": "warning",
+      "flows": ["exterior"],
+      "title_es": "Usa solo canales oficiales",
+      "title_en": "Use only official channels",
+      "body_es": "El alcalde de Cali pidió a la comunidad internacional canalizar las donaciones exclusivamente a través de la Cruz Roja Colombiana para evitar posibles estafas.",
+      "body_en": "Cali's mayor asked the international community to channel donations exclusively through the Colombian Red Cross to avoid scams.",
+      "active": true
+    },
+    {
+      "id": "alert-especie",
+      "type": "info",
+      "flows": ["colombia"],
+      "title_es": "¿Qué llevar?",
+      "title_en": "What to bring?",
+      "body_es": "Solo artículos no vencidos: agua potable, alimentos no perecederos, cobijas, artículos de higiene personal, suministros de primeros auxilios. No llevar ropa sin que se solicite.",
+      "body_en": "Only non-expired items: bottled water, non-perishable food, blankets, personal hygiene items, first aid supplies. Don't bring clothing unless requested.",
+      "active": true
+    },
+    {
+      "id": "alert-sangre",
+      "type": "critica",
+      "flows": ["colombia"],
+      "title_es": "Donación de sangre urgente",
+      "title_en": "Urgent blood donation needed",
+      "body_es": "El Hospital Universitario del Valle (Cali) y el Hemocentro del Café (Manizales) necesitan sangre con urgencia. Prioridad O+ y O-, aunque se aceptan todos los grupos.",
+      "body_en": "Hospital Universitario del Valle (Cali) and Hemocentro del Café (Manizales) urgently need blood. Priority O+ and O-, but all blood types accepted.",
+      "active": true
+    }
+  ]
+}
