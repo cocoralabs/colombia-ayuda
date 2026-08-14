@@ -89,6 +89,19 @@ const I18N = {
     "alerts.markAllRead": "Marcar todas como leídas",
     "alerts.empty": "No hay alertas por ahora.",
 
+    "filters.cityLabel": "📍 Filtrar por ciudad:",
+    "city.todas": "Todas las ciudades",
+    "city.choco": "Chocó",
+    "city.pereira": "Pereira",
+    "city.cali": "Cali",
+    "city.bogota": "Bogotá",
+    "city.manizales": "Manizales",
+    "city.medellin": "Medellín",
+    "city.armenia": "Armenia",
+    "city.barranquilla": "Barranquilla",
+    "city.otras": "Otras",
+    "common.emptyFilterCombo": "No encontramos organizaciones con ese filtro. Prueba con otra combinación.",
+
     "donate.title": "Dona diferente",
     "donate.time.title": "Dona tu TIEMPO",
     "donate.time.desc": "Inscríbete como voluntario/a y ayuda en terreno con distribución de ayuda, logística y acompañamiento a las comunidades afectadas.",
@@ -254,6 +267,19 @@ const I18N = {
     "alerts.title": "Alerts",
     "alerts.markAllRead": "Mark all as read",
     "alerts.empty": "No alerts right now.",
+
+    "filters.cityLabel": "📍 Filter by city:",
+    "city.todas": "All cities",
+    "city.choco": "Chocó",
+    "city.pereira": "Pereira",
+    "city.cali": "Cali",
+    "city.bogota": "Bogotá",
+    "city.manizales": "Manizales",
+    "city.medellin": "Medellín",
+    "city.armenia": "Armenia",
+    "city.barranquilla": "Barranquilla",
+    "city.otras": "Other",
+    "common.emptyFilterCombo": "We couldn't find organizations for that filter. Try a different combination.",
 
     "donate.title": "Donate differently",
     "donate.time.title": "Donate your TIME",
@@ -848,6 +874,19 @@ const NEED_ICONS = {
 
 const FILTER_KEYS = ["todos", "alimentos", "agua", "medicinas", "sangre", "dinero", "tiempo", "wifi", "mascotas"];
 
+const CITY_FILTER_KEYS = ["todas", "choco", "pereira", "cali", "bogota", "manizales", "medellin", "armenia", "barranquilla", "otras"];
+const CITY_FILTER_MATCH = {
+  choco: ["Quibdó"],
+  pereira: ["Pereira"],
+  cali: ["Cali"],
+  bogota: ["Bogotá"],
+  manizales: ["Manizales"],
+  medellin: ["Medellín"],
+  armenia: ["Armenia"],
+  barranquilla: ["Barranquilla"]
+};
+const CITY_FILTER_NAMED_CITIES = Object.values(CITY_FILTER_MATCH).flat();
+
 const NAV_ITEMS = [
   { key: "home", icon: "🏠", screen: "screen-home" },
   { key: "map", icon: "🗺️", screen: "screen-map" },
@@ -911,7 +950,8 @@ const state = {
   activeNav: "home",
   openBloodCity: null,
   activeCity: "todas",
-  alertsRead: false
+  alertsRead: false,
+  homeCityFilter: "todas"
 };
 
 /* ==========================================================================
@@ -1010,6 +1050,7 @@ function setLang(lang) {
   localStorage.setItem("ca_lang", lang);
   applyI18n();
   renderFilters();
+  renderCityFilters();
   renderOrgList();
   renderBottomNavs();
   if (state.selectedOrgId) renderDetail();
@@ -1031,9 +1072,12 @@ function showScreen(id, opts) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   const el = document.getElementById(id);
   el.classList.add("active");
-  const scrollable = el.querySelector(".home-scroll, .detail-scroll, .donate-scroll");
+  const scrollable = el.querySelector(".home-scroll, .detail-scroll, .donate-scroll, .map-scroll, .donations-scroll, .profile-scroll");
   if (scrollable) scrollable.scrollTop = 0;
+  window.scrollTo(0, 0);
   updateBottomNavHighlight(id);
+  const scrollTopBtn = document.getElementById("scroll-top-btn");
+  if (scrollTopBtn) scrollTopBtn.classList.remove("show");
 }
 
 function updateBottomNavHighlight(currentId) {
@@ -1084,9 +1128,42 @@ function renderFilters() {
   });
 }
 
+function renderCityFilters() {
+  const wrap = document.getElementById("city-filters");
+  wrap.innerHTML = "";
+  CITY_FILTER_KEYS.forEach(key => {
+    const chip = document.createElement("button");
+    chip.className = "filter-chip" + (state.homeCityFilter === key ? " active" : "");
+    chip.textContent = t("city." + key);
+    chip.addEventListener("click", () => {
+      state.homeCityFilter = key;
+      renderCityFilters();
+      renderOrgList();
+    });
+    wrap.appendChild(chip);
+  });
+}
+
+function orgCityList(org) {
+  if (!org.points) return [];
+  return org.points.map(p => p.city && normalizeCity(p.city)).filter(Boolean);
+}
+
+function orgMatchesCityFilter(org, cityKey) {
+  if (cityKey === "todas") return true;
+  const cities = orgCityList(org);
+  if (!cities.length) return false;
+  if (cityKey === "otras") return cities.some(c => !CITY_FILTER_NAMED_CITIES.includes(c));
+  const targets = CITY_FILTER_MATCH[cityKey] || [];
+  return cities.some(c => targets.includes(c));
+}
+
 function getFilteredOrgs() {
-  if (state.activeFilter === "todos") return ORGS;
-  return ORGS.filter(o => o.needs.includes(state.activeFilter));
+  return ORGS.filter(o => {
+    const matchesNeed = state.activeFilter === "todos" || o.needs.includes(state.activeFilter);
+    const matchesCity = orgMatchesCityFilter(o, state.homeCityFilter);
+    return matchesNeed && matchesCity;
+  });
 }
 
 function orgLogoHTML(org) {
@@ -1133,7 +1210,8 @@ function renderOrgList() {
   const wrap = document.getElementById("org-list");
   const orgs = getFilteredOrgs();
   if (!orgs.length) {
-    wrap.innerHTML = `<p style="text-align:center;color:var(--text-secondary);font-size:13px;padding:24px 10px;">${t("common.emptyFilter")}</p>`;
+    const emptyKey = state.homeCityFilter !== "todas" ? "common.emptyFilterCombo" : "common.emptyFilter";
+    wrap.innerHTML = `<p style="text-align:center;color:var(--text-secondary);font-size:13px;padding:24px 10px;">${t(emptyKey)}</p>`;
     return;
   }
   wrap.innerHTML = orgs.map(orgCardHTML).join("");
@@ -1769,12 +1847,26 @@ function wireEvents() {
   document.querySelectorAll(".nav-back").forEach(btn => {
     btn.addEventListener("click", () => showScreen(btn.dataset.target));
   });
+
+  wireScrollTop();
+}
+
+function wireScrollTop() {
+  const btn = document.getElementById("scroll-top-btn");
+  window.addEventListener("scroll", () => {
+    if (document.getElementById("screen-splash").classList.contains("active")) return;
+    btn.classList.toggle("show", window.scrollY > 300);
+  }, { passive: true });
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
 
 function init() {
   wireEvents();
   applyI18n();
   renderFilters();
+  renderCityFilters();
   renderOrgList();
   renderBottomNavs();
   renderDonateScreen();

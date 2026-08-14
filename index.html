@@ -107,7 +107,7 @@
       </div>
     </header>
 
-    <div class="home-scroll">
+    <div class="home-scroll" id="home-scroll">
       <div class="location-row">
         <div class="location-pill">📍 <span data-i18n="home.location">San José del Palmar, Chocó</span></div>
         <span class="badge badge-critica" data-i18n="urgency.critica">CRÍTICO</span>
@@ -121,6 +121,9 @@
       </div>
 
       <div class="filters" id="filters"></div>
+
+      <p class="city-filter-label" data-i18n="filters.cityLabel">📍 Filtrar por ciudad:</p>
+      <div class="filters city-filters" id="city-filters"></div>
 
       <div class="org-list" id="org-list"></div>
     </div>
@@ -205,6 +208,11 @@
     <div class="alerts-list" id="alerts-list"></div>
     <button class="alerts-mark-all-btn" id="alerts-mark-all" data-i18n="alerts.markAllRead">Marcar todas como leídas</button>
   </aside>
+
+  <!-- ============ BOTÓN VOLVER ARRIBA ============ -->
+  <div class="scroll-top-wrap">
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Volver arriba">↑</button>
+  </div>
 </div>
 
 <script src="app.js"></script>
