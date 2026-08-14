@@ -1832,7 +1832,7 @@ function renderProfileScreen() {
     <div class="profile-section">
       <h2 class="profile-section-title">${t("profile.verify.title")}</h2>
       <p class="profile-text">${t("profile.verify.official")}</p>
-      <p class="profile-text"><b>${t("profile.verify.urlLabel")}</b> colombiaayuda.vercel.app</p>
+      <p class="profile-text"><b>${t("profile.verify.urlLabel")}</b> colombia-ayuda-brown.vercel.app</p>
       <p class="profile-text">${t("profile.verify.accounts")}</p>
       <p class="profile-text">${t("profile.verify.report")}</p>
       <span class="verify-badge">✓ ${t("profile.verify.badge")}</span>
