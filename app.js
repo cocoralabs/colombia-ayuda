@@ -17,13 +17,11 @@ const I18N = {
     "splash.source": "Fuente: UNGRD · 14 ago 2026",
     "splash.btnColombia": "Estoy en Colombia",
     "splash.btnAbroad": "I'm abroad",
-    "splash.footer": "Plataforma segura y verificada",
+    "splash.footer": "Información recopilada de fuentes oficiales verificadas",
 
     "home.location": "San José del Palmar, Chocó",
     "home.needHelp": "Organizaciones que necesitan ayuda",
-    "home.updated": "Actualizado",
-    "home.minAgo": "min",
-    "home.updatedNow": "Actualizado ahora",
+    "home.lastVerified": "Última verificación: 14 ago 2026",
 
     "urgency.critica": "CRÍTICO",
     "urgency.alta": "ALTO",
@@ -173,12 +171,18 @@ const I18N = {
     "profile.about.title": "Sobre esta app",
     "profile.about.text": "Colombia Ayuda es una plataforma voluntaria e independiente creada para centralizar información verificada de ayuda humanitaria durante la emergencia, conectando a las personas con organizaciones y puntos de donación reales.",
     "profile.version": "Versión 3.0 · Agosto 2026",
+    "profile.operator.title": "Quién opera esta plataforma",
+    "profile.operator.text": "Colombia Ayuda es operada por Cocora-Labs S.A.S. (NIT 902.043.670-1), empresa de tecnología registrada en Colombia. No recibimos ni gestionamos donaciones. Contacto: info@cocoralabs.com",
     "profile.verify.title": "Verificación",
     "profile.verify.official": "Esta es la única versión oficial de Colombia Ayuda.",
     "profile.verify.urlLabel": "URL oficial:",
     "profile.verify.accounts": "Todas las cuentas bancarias han sido verificadas con fuentes oficiales.",
     "profile.verify.report": "Si ves una versión diferente de esta app, repórtala a info@cocoralabs.com.",
     "profile.verify.badge": "Información verificada · Agosto 2026",
+    "profile.howVerify.title": "Cómo verificamos la información",
+    "profile.howVerify.text": "Todas las organizaciones y cuentas bancarias fueron verificadas directamente en sus sitios web oficiales, redes sociales verificadas y comunicados de prensa. Última verificación: 14 de agosto de 2026. Para reportar información incorrecta: info@cocoralabs.com",
+    "profile.privacy.title": "Política de privacidad",
+    "profile.privacy.text": "Esta plataforma no recolecta datos personales. No usamos cookies de seguimiento. El único dato almacenado localmente es tu preferencia de idioma (ES/EN) en localStorage de tu navegador. Usamos Vercel Analytics para métricas anónimas de tráfico.",
     "profile.legal": "⚠️ Aviso legal: Colombia Ayuda es una plataforma informativa independiente. No recibimos ni gestionamos donaciones directamente. Toda la información de cuentas bancarias proviene de fuentes oficiales verificadas. Cocora-Labs no se hace responsable del uso que terceros hagan de esta información. Para reportar información incorrecta: info@cocoralabs.com",
     "profile.sources.title": "Fuentes verificadas",
     "profile.sources.cruzroja": "Cruz Roja Colombiana",
@@ -200,13 +204,11 @@ const I18N = {
     "splash.source": "Source: UNGRD · Aug 14, 2026",
     "splash.btnColombia": "I'm in Colombia",
     "splash.btnAbroad": "I'm abroad",
-    "splash.footer": "Secure & verified platform",
+    "splash.footer": "Information gathered from verified official sources",
 
     "home.location": "San José del Palmar, Chocó",
     "home.needHelp": "Organizations that need help",
-    "home.updated": "Updated",
-    "home.minAgo": "min",
-    "home.updatedNow": "Updated just now",
+    "home.lastVerified": "Last verified: Aug 14, 2026",
 
     "urgency.critica": "CRITICAL",
     "urgency.alta": "HIGH",
@@ -356,12 +358,18 @@ const I18N = {
     "profile.about.title": "About this app",
     "profile.about.text": "Colombia Ayuda is a volunteer-run, independent platform built to centralize verified humanitarian aid information during the emergency, connecting people with real organizations and donation points.",
     "profile.version": "Version 3.0 · August 2026",
+    "profile.operator.title": "Who operates this platform",
+    "profile.operator.text": "Colombia Ayuda is operated by Cocora-Labs S.A.S. (Tax ID / NIT 902.043.670-1), a technology company registered in Colombia. We do not receive or manage donations. Contact: info@cocoralabs.com",
     "profile.verify.title": "Verification",
     "profile.verify.official": "This is the only official version of Colombia Ayuda.",
     "profile.verify.urlLabel": "Official URL:",
     "profile.verify.accounts": "All bank accounts have been verified against official sources.",
     "profile.verify.report": "If you see a different version of this app, report it to info@cocoralabs.com.",
     "profile.verify.badge": "Verified information · August 2026",
+    "profile.howVerify.title": "How we verify information",
+    "profile.howVerify.text": "All organizations and bank accounts were verified directly on their official websites, verified social media accounts and press releases. Last verified: August 14, 2026. To report incorrect information: info@cocoralabs.com",
+    "profile.privacy.title": "Privacy policy",
+    "profile.privacy.text": "This platform does not collect personal data. We do not use tracking cookies. The only data stored locally is your language preference (ES/EN) in your browser's localStorage. We use Vercel Analytics for anonymous traffic metrics.",
     "profile.legal": "⚠️ Legal notice: Colombia Ayuda is an independent informational platform. We do not receive or manage donations directly. All bank account information comes from verified official sources. Cocora-Labs is not responsible for how third parties use this information. To report incorrect information: info@cocoralabs.com",
     "profile.sources.title": "Verified sources",
     "profile.sources.cruzroja": "Colombian Red Cross",
@@ -1817,12 +1825,22 @@ function renderProfileScreen() {
     </div>
 
     <div class="profile-section">
+      <h2 class="profile-section-title">${t("profile.operator.title")}</h2>
+      <p class="profile-text">${t("profile.operator.text")}</p>
+    </div>
+
+    <div class="profile-section">
       <h2 class="profile-section-title">${t("profile.verify.title")}</h2>
       <p class="profile-text">${t("profile.verify.official")}</p>
       <p class="profile-text"><b>${t("profile.verify.urlLabel")}</b> colombiaayuda.vercel.app</p>
       <p class="profile-text">${t("profile.verify.accounts")}</p>
       <p class="profile-text">${t("profile.verify.report")}</p>
       <span class="verify-badge">✓ ${t("profile.verify.badge")}</span>
+    </div>
+
+    <div class="profile-section">
+      <h2 class="profile-section-title">${t("profile.howVerify.title")}</h2>
+      <p class="profile-text">${t("profile.howVerify.text")}</p>
     </div>
 
     <div class="profile-section">
@@ -1840,6 +1858,11 @@ function renderProfileScreen() {
         <span class="ig-row-label">📷 Instagram</span>
         <span class="ig-row-handle">@tigresasmoviendoseconcorazon</span>
       </div>
+    </div>
+
+    <div class="profile-section">
+      <h2 class="profile-section-title">${t("profile.privacy.title")}</h2>
+      <p class="profile-text">${t("profile.privacy.text")}</p>
     </div>
 
     <div class="profile-actions">
@@ -1890,11 +1913,6 @@ function wireEvents() {
     updateAlertsBadge();
     closeAlertsPanel();
   });
-  document.getElementById("refresh-btn").addEventListener("click", () => {
-    document.getElementById("updated-min").textContent = "1";
-    toast(t("toast.updated"));
-  });
-
   document.getElementById("detail-back").addEventListener("click", () => showScreen(state.detailOrigin));
   document.getElementById("detail-share").addEventListener("click", () => toast(t("toast.shared")));
   document.getElementById("detail-menu").addEventListener("click", () => toast(t("toast.copied")));
