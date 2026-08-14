@@ -406,6 +406,7 @@ const ORGS = [
     logoInitials: "CR",
     logoColor: "#c0392b",
     logoBg: "#3a1a1a",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_the_Red_Cross.svg/100px-Flag_of_the_Red_Cross.svg.png",
     description: {
       es: "Organización humanitaria líder en la respuesta a la emergencia. Campaña #TodosPorColombia. Activa en rescate, atención médica, distribución de víveres y reunificación familiar.",
       en: "Leading humanitarian organization responding to the emergency. Campaign #TodosPorColombia. Active in rescue, medical care, food distribution and family reunification."
@@ -449,8 +450,8 @@ const ORGS = [
     name: "ABACO",
     categoryKey: "alimentos",
     logoInitials: "AB",
-    logoColor: "#d68910",
-    logoBg: "#3a2a10",
+    logoColor: "#fff",
+    logoBg: "#E8531D",
     description: {
       es: "Asociación de Bancos de Alimentos de Colombia. Coordina el corredor humanitario de alimentos hacia las zonas afectadas. Activa en Armenia, Cali, Manizales, Medellín e Ibagué.",
       en: "Association of Colombian Food Banks. Coordinates the humanitarian food corridor to affected areas. Active in Armenia, Cali, Manizales, Medellín and Ibagué."
@@ -483,9 +484,9 @@ const ORGS = [
     flow: "both",
     name: "Banco de Alimentos de Bogotá",
     categoryKey: "alimentos",
-    logoInitials: "BA",
-    logoColor: "#1e8449",
-    logoBg: "#123322",
+    logoInitials: "BAB",
+    logoColor: "#fff",
+    logoBg: "#E31837",
     description: {
       es: "Activó campaña de emergencia. Acepta donaciones internacionales vía web. Rappi habilitó un botón de donación integrado con este banco de alimentos.",
       en: "Activated emergency campaign. Accepts international donations via web. Rappi enabled a donation button linked to this food bank."
@@ -508,9 +509,9 @@ const ORGS = [
     flow: "colombia",
     name: { es: "Alcaldía Cali — Plazoleta Jairo Varela", en: "Cali City Hall — Jairo Varela Plaza" },
     categoryKey: "gobierno",
-    logoInitials: "CA",
-    logoColor: "#993556",
-    logoBg: "#331621",
+    logoInitials: "CAL",
+    logoColor: "#fff",
+    logoBg: "#006633",
     description: {
       es: "Cali es una de las ciudades más afectadas. La Alcaldía habilitó la Plazoleta Jairo Varela como punto central de acopio para rescatistas y familias.",
       en: "Cali is one of the hardest-hit cities. The City Hall enabled Plazoleta Jairo Varela as the main collection point for rescuers and families."
@@ -532,9 +533,9 @@ const ORGS = [
     flow: "colombia",
     name: { es: "Alcaldía Pereira — 7 puntos", en: "Pereira City Hall — 7 points" },
     categoryKey: "gobierno",
-    logoInitials: "PE",
-    logoColor: "#854F0B",
-    logoBg: "#332608",
+    logoInitials: "PER",
+    logoColor: "#fff",
+    logoBg: "#C41230",
     description: {
       es: "Pereira es la ciudad con más víctimas mortales. 7 puntos de acopio distribuidos en barrios y comunas.",
       en: "Pereira has the highest death toll. 7 collection points distributed across neighborhoods."
@@ -563,9 +564,9 @@ const ORGS = [
     flow: "colombia",
     name: { es: "Alcaldía Manizales — albergues + Hemocentro", en: "Manizales City Hall — shelters + Blood Center" },
     categoryKey: "gobierno",
-    logoInitials: "MZ",
-    logoColor: "#0F6E56",
-    logoBg: "#0c2b23",
+    logoInitials: "MAN",
+    logoColor: "#fff",
+    logoBg: "#003087",
     description: {
       es: "Manizales habilitó tres albergues temporales y el Hemocentro del Café para donación de sangre. Prioridad: sangre tipo O+ y O-.",
       en: "Manizales opened three temporary shelters and the Hemocentro del Café for blood donation. Priority: blood type O+ and O-."
@@ -593,6 +594,7 @@ const ORGS = [
     logoInitials: "UN",
     logoColor: "#185FA5",
     logoBg: "#0e2942",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UNICEF_logo.svg/200px-UNICEF_logo.svg.png",
     description: {
       es: "Organización de la ONU enfocada en proteger a los niños afectados. Acepta donaciones desde más de 190 países, coordinando con autoridades colombianas.",
       en: "UN organization focused on protecting affected children. Accepts donations from over 190 countries, coordinating with Colombian authorities."
@@ -616,6 +618,7 @@ const ORGS = [
     logoInitials: "WK",
     logoColor: "#1e8449",
     logoBg: "#123322",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/World_Central_Kitchen_logo.svg/200px-World_Central_Kitchen_logo.svg.png",
     description: {
       es: "Fundada por el chef José Andrés. Proporciona comidas frescas de emergencia trabajando con cocineros y organizaciones locales.",
       en: "Founded by Chef José Andrés. Provides fresh emergency meals working with local cooks and organizations."
@@ -708,6 +711,7 @@ const ORGS = [
     logoInitials: "WF",
     logoColor: "#854F0B",
     logoBg: "#332608",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/World_Food_Programme_Logo_Simple.svg/200px-World_Food_Programme_Logo_Simple.svg.png",
     description: {
       es: "Programa Mundial de Alimentos. Trabaja con autoridades colombianas para atender la inseguridad alimentaria en albergues y zonas de difícil acceso.",
       en: "World Food Programme. Works with Colombian authorities to address food insecurity in shelters and hard-to-reach areas."
@@ -754,6 +758,7 @@ const ORGS = [
     logoInitials: "PL",
     logoColor: "#c0392b",
     logoBg: "#3a1a1a",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Plan_International_logo.svg/200px-Plan_International_logo.svg.png",
     description: {
       es: "ONG internacional activa en Colombia. Acepta donaciones desde el extranjero para familias afectadas, con enfoque en niños y mujeres.",
       en: "International NGO active in Colombia. Accepts donations from abroad for affected families, focused on children and women."
@@ -800,6 +805,7 @@ const ORGS = [
     logoInitials: "❤",
     logoColor: "#FCD116",
     logoBg: "#3a3013",
+    logoUrl: "public/images/colombia-un-solo-corazon.svg",
     instagram: "@tigresasmoviendoseconcorazon",
     isSpecial: true,
     description: {
@@ -1224,7 +1230,30 @@ function getFilteredOrgs() {
 }
 
 function orgLogoHTML(org) {
-  return `<div class="org-logo" style="background:${org.logoBg};color:${org.logoColor}">${org.logoInitials}</div>`;
+  const fallback = `<div class="org-logo${org.logoUrl ? " org-logo-fallback" : ""}" style="background:${org.logoBg};color:${org.logoColor}">${org.logoInitials}</div>`;
+  if (!org.logoUrl) return fallback;
+  return `<div class="org-logo-wrap">
+    <img class="org-logo-img" src="${escapeHtml(org.logoUrl)}" alt="${escapeHtml(orgName(org))}" loading="lazy">
+    ${fallback}
+  </div>`;
+}
+
+function detailLogoHTML(org) {
+  const fallback = `<div class="detail-logo${org.logoUrl ? " detail-logo-fallback" : ""}" style="background:${org.logoBg};color:${org.logoColor}">${org.logoInitials}</div>`;
+  if (!org.logoUrl) return fallback;
+  return `<div class="detail-logo-imgwrap">
+    <img class="detail-logo-img" src="${escapeHtml(org.logoUrl)}" alt="${escapeHtml(orgName(org))}">
+    ${fallback}
+  </div>`;
+}
+
+function wireLogoFallbacks(root) {
+  root.querySelectorAll(".org-logo-img, .detail-logo-img").forEach(img => {
+    img.addEventListener("error", () => {
+      img.style.display = "none";
+      img.nextElementSibling.style.display = "flex";
+    });
+  });
 }
 
 function metaTimeLabel(min) {
@@ -1275,6 +1304,7 @@ function renderOrgList() {
   wrap.querySelectorAll(".org-card").forEach(card => {
     card.addEventListener("click", () => openDetail(card.dataset.orgId, "screen-home"));
   });
+  wireLogoFallbacks(wrap);
 }
 
 /* ==========================================================================
@@ -1382,7 +1412,7 @@ function renderDetail() {
 
   wrap.innerHTML = `
     <div class="detail-logo-wrap">
-      <div class="detail-logo" style="background:${org.logoBg};color:${org.logoColor}">${org.logoInitials}</div>
+      ${detailLogoHTML(org)}
       <h1 class="detail-name">${escapeHtml(orgName(org))}</h1>
       <div class="detail-cat-row">
         <span class="detail-category">${categoryLabel(org)}</span>
@@ -1423,6 +1453,8 @@ function renderDetail() {
       <a class="more-info-link" id="detail-more-info">${t("detail.moreInfo")} ⓘ</a>
     </div>
   `;
+
+  wireLogoFallbacks(wrap);
 
   const cta = document.getElementById("detail-cta");
   cta.addEventListener("click", () => {

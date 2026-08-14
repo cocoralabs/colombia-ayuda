@@ -434,15 +434,24 @@ a{color:inherit;text-decoration:none;}
   gap:12px;
 }
 .org-logo{
-  width:48px;height:48px;
+  width:52px;height:52px;
   border-radius:14px;
   display:flex;align-items:center;justify-content:center;
   font-weight:800;
-  font-size:15px;
+  font-size:14px;
   flex-shrink:0;
   color:#fff;
 }
-.org-logo img{width:100%;height:100%;object-fit:cover;border-radius:14px;}
+.org-logo-wrap{flex-shrink:0;}
+.org-logo-img{
+  display:block;
+  width:52px;height:52px;
+  border-radius:12px;
+  background:#fff;
+  padding:6px;
+  object-fit:contain;
+}
+.org-logo-fallback{display:none;}
 
 .org-info{flex:1;min-width:0;}
 .org-name-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
@@ -568,6 +577,16 @@ a{color:inherit;text-decoration:none;}
   display:flex;align-items:center;justify-content:center;
   font-weight:800;font-size:24px;color:#fff;
 }
+.detail-logo-imgwrap{display:inline-block;}
+.detail-logo-img{
+  display:block;
+  width:80px;height:80px;
+  border-radius:20px;
+  background:#fff;
+  padding:10px;
+  object-fit:contain;
+}
+.detail-logo-fallback{display:none;}
 .detail-name{font-size:21px;font-weight:800;color:#fff;margin:2px 0 0;}
 .detail-cat-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;}
 .detail-category{color:var(--blue-light);font-weight:700;font-size:13px;}
