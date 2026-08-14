@@ -10,8 +10,11 @@ const I18N = {
   es: {
     "splash.badge": "TERREMOTO 7.4 — SAN JOSÉ DEL PALMAR, COLOMBIA 2026",
     "splash.tagline": "UNIDOS SALVAMOS VIDAS",
-    "splash.counter1": "personas ayudadas",
-    "splash.counter2": "organizaciones activas",
+    "splash.counter1": "personas afectadas",
+    "splash.counter2": "vidas perdidas",
+    "splash.counter3": "familias sin hogar",
+    "splash.counter4": "organizaciones activas",
+    "splash.source": "Fuente: UNGRD · 14 ago 2026",
     "splash.btnColombia": "Estoy en Colombia",
     "splash.btnAbroad": "I'm abroad",
     "splash.footer": "Plataforma segura y verificada",
@@ -190,8 +193,11 @@ const I18N = {
   en: {
     "splash.badge": "7.4 EARTHQUAKE — SAN JOSÉ DEL PALMAR, COLOMBIA 2026",
     "splash.tagline": "UNITED WE SAVE LIVES",
-    "splash.counter1": "people helped",
-    "splash.counter2": "active organizations",
+    "splash.counter1": "people affected",
+    "splash.counter2": "lives lost",
+    "splash.counter3": "families homeless",
+    "splash.counter4": "active organizations",
+    "splash.source": "Source: UNGRD · Aug 14, 2026",
     "splash.btnColombia": "I'm in Colombia",
     "splash.btnAbroad": "I'm abroad",
     "splash.footer": "Secure & verified platform",
@@ -1099,9 +1105,11 @@ function setLang(lang) {
   renderMapScreen();
   renderDonationsScreen();
   renderProfileScreen();
-  ["counter-people", "counter-orgs"].forEach(id => {
+  SPLASH_COUNTER_IDS.forEach(id => {
     const el = document.getElementById(id);
-    if (el && el.dataset.target) el.textContent = formatNum(Number(el.dataset.target));
+    if (el && el.dataset.target) {
+      el.textContent = (el.dataset.prefix || "") + formatNum(Number(el.dataset.target)) + (el.dataset.suffix || "");
+    }
   });
 }
 
@@ -1510,22 +1518,28 @@ function formatNum(n) {
 }
 
 function animateCounter(el, target, duration) {
+  const prefix = el.dataset.prefix || "";
+  const suffix = el.dataset.suffix || "";
   const start = performance.now();
   function step(now) {
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
     const value = Math.round(target * eased);
-    el.textContent = formatNum(value);
+    el.textContent = prefix + formatNum(value) + suffix;
     el.dataset.target = target;
     if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = formatNum(target);
+    else el.textContent = prefix + formatNum(target) + suffix;
   }
   requestAnimationFrame(step);
 }
 
+const SPLASH_COUNTER_IDS = ["counter-1", "counter-2", "counter-3", "counter-4"];
+const SPLASH_COUNTER_TARGETS = { "counter-1": 102263, "counter-2": 285, "counter-3": 45000, "counter-4": 200 };
+
 function initSplashCounters() {
-  animateCounter(document.getElementById("counter-people"), 12480, 1400);
-  animateCounter(document.getElementById("counter-orgs"), 214, 1400);
+  SPLASH_COUNTER_IDS.forEach(id => {
+    animateCounter(document.getElementById(id), SPLASH_COUNTER_TARGETS[id], 1400);
+  });
 }
 
 /* ==========================================================================

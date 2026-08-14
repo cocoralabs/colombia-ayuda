@@ -61,19 +61,34 @@
 
       <div class="counters">
         <div class="counter">
-          <span class="counter-num" id="counter-people">0</span>
-          <span class="counter-label" data-i18n="splash.counter1">personas ayudadas</span>
+          <span class="counter-num" id="counter-1" data-prefix="+" data-suffix="">0</span>
+          <span class="counter-label" data-i18n="splash.counter1">personas afectadas</span>
         </div>
-        <div class="counter-divider"></div>
         <div class="counter">
-          <span class="counter-num" id="counter-orgs">0</span>
-          <span class="counter-label" data-i18n="splash.counter2">organizaciones activas</span>
+          <span class="counter-num" id="counter-2" data-prefix="" data-suffix="+">0</span>
+          <span class="counter-label" data-i18n="splash.counter2">vidas perdidas</span>
+        </div>
+        <div class="counter">
+          <span class="counter-num" id="counter-3" data-prefix="+" data-suffix="">0</span>
+          <span class="counter-label" data-i18n="splash.counter3">familias sin hogar</span>
+        </div>
+        <div class="counter">
+          <span class="counter-num" id="counter-4" data-prefix="+" data-suffix="">0</span>
+          <span class="counter-label" data-i18n="splash.counter4">organizaciones activas</span>
         </div>
       </div>
+      <p class="counters-source" data-i18n="splash.source">Fuente: UNGRD · 14 ago 2026</p>
 
       <div class="splash-buttons">
         <button class="btn btn-yellow btn-lg" id="btn-colombia">
-          <span>🇨🇴 <span data-i18n="splash.btnColombia">Estoy en Colombia</span></span><span class="chev">›</span>
+          <span>
+            <svg class="flag-co" width="24" height="16" viewBox="0 0 24 16" aria-hidden="true">
+              <rect width="24" height="8" y="0" fill="#FCD116"/>
+              <rect width="24" height="4" y="8" fill="#003087"/>
+              <rect width="24" height="4" y="12" fill="#CE1126"/>
+            </svg>
+            <span data-i18n="splash.btnColombia">Estoy en Colombia</span>
+          </span><span class="chev">›</span>
         </button>
         <button class="btn btn-blue btn-lg" id="btn-abroad">
           <span>🌐 <span data-i18n="splash.btnAbroad">I'm abroad</span></span><span class="chev">›</span>
